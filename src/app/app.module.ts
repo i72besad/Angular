@@ -9,6 +9,7 @@ import { EjemplosComponent } from './componentes/ejemplos/ejemplos.component';
 import { EjerciciosComponent } from './componentes/ejercicios/ejercicios.component';
 import { GlosarioComponent } from './componentes/glosario/glosario.component';
 import { PageNotFoundComponent } from './componentes/page-not-found/page-not-found.component';
+import { AngularCliComponent } from './componentes/angular-cli/angular-cli.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PageNotFoundComponent } from './componentes/page-not-found/page-not-fou
     EjemplosComponent,
     EjerciciosComponent,
     GlosarioComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AngularCliComponent
   ],
   imports: [
     BrowserModule,
