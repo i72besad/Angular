@@ -8,9 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular 8';
   secciones = [
+    "Instalación",
     "Hola-Mundo",
-    "Recursos",
-    "Referencias",
+    "Ejemplos",
+    "Ejercicios",
     "Glosario"
   ]
 }

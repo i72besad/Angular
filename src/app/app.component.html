@@ -1,9 +1,9 @@
 <span>
-  <img src="/assets/img/angular-logo.png" width="200px"/>
+  <a routerLink="/"><img src="/assets/img/angular-logo.png" width="200px"/></a>
 </span>
 
 <nav>
-  <a *ngFor="let seccion of secciones">{{seccion}}</a>
+  <a routerLink="/{{seccion | lowercase}}" *ngFor="let seccion of secciones">{{seccion}}</a>
 </nav>
 
 <router-outlet></router-outlet>

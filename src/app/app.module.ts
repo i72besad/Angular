@@ -3,10 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { InstalacionComponent } from './componentes/instalacion/instalacion.component';
+import { HolaMundoComponent } from './componentes/hola-mundo/hola-mundo.component';
+import { EjemplosComponent } from './componentes/ejemplos/ejemplos.component';
+import { EjerciciosComponent } from './componentes/ejercicios/ejercicios.component';
+import { GlosarioComponent } from './componentes/glosario/glosario.component';
+import { PageNotFoundComponent } from './componentes/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InstalacionComponent,
+    HolaMundoComponent,
+    EjemplosComponent,
+    EjerciciosComponent,
+    GlosarioComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
