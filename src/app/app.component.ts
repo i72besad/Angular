@@ -10,6 +10,7 @@ export class AppComponent {
   secciones = [
     "Instalación",
     "Hola-Mundo",
+    "Angular-CLI",
     "Ejemplos",
     "Ejercicios",
     "Glosario"
