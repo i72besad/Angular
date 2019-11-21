@@ -3,17 +3,13 @@ span {
     text-align: center;
     margin: auto;
     display: block;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
     box-shadow: 2px 2px 10px #666;
 }
 
 nav {
     text-align: center;
     padding: 0.5em;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background: rgb(53, 143, 216);
+    background: #1976d2;
     box-shadow: 2px 2px 10px #666;
 }
 
@@ -23,5 +19,9 @@ nav a {
 }
 
 nav a:hover {
-    color: red;
+    color: #c3002f;
+}
+
+nav a:active {
+    color: #dd0031;
 }
