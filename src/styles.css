@@ -5,8 +5,10 @@
     padding: 0;
 }
 
+html, body { height: 100%; }
+
 body {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab', Roboto, "Helvetica Neue", sans-serif;
     /*background-image: url("./assets/img/background-1.png");*/
     background-color: rgba(25, 118, 210, 0.157);
 }
@@ -33,3 +35,4 @@ a:active{
     background-color: transparent;
     text-decoration: none;
 }
+

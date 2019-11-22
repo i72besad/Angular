@@ -26,3 +26,10 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents = [InstalacionComponent, 
+                                  HolaMundoComponent,
+                                  AngularCliComponent,
+                                  EjemplosComponent,
+                                  EjerciciosComponent,
+                                  GlosarioComponent,
+                                  PageNotFoundComponent]
