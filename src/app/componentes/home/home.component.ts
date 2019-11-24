@@ -8,10 +8,10 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   animations: [
     trigger('aniBoton', [
       state('inactive', style({
-        backgroundColor:'#eee'
+        backgroundImage: 'green'
       })),
       state('active', style({
-        backgroundColor: '#ff0000'
+        backgroundImage: '#ff0000'
       })),
       transition('inactive => active', animate('100ms ease-in')),
       transition('active => inactive', animate('100ms ease-out'))

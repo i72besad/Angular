@@ -56,3 +56,9 @@ ul {
 .extern i {
     color: cornflowerblue;
 }
+
+mat-card {
+    background: black;
+    color: white;
+}
+

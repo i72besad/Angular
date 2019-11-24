@@ -52,3 +52,8 @@ th.mat-column-description, td.mat-column-description {
   .mat-table-sticky:first-child {
     border-right: 1px solid #e0e0e0;
   }
+
+  .mat-card {
+    background: black;
+    color: white;
+  }
