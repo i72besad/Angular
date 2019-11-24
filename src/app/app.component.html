@@ -6,7 +6,7 @@
 
   <div id="content">
     <nav>
-      <a routerLink="/{{seccion | lowercase}}" *ngFor="let seccion of secciones">{{seccion}}</a>
+      <a routerLink="/{{seccion | lowercase}}" *ngFor="let seccion of secciones"><button mat-button>{{seccion}}</button></a>
     </nav>
   
     <router-outlet></router-outlet>

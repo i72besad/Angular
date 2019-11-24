@@ -16,6 +16,11 @@ mat-sidenav a {
   padding : 10px 10px;
 }
 
+mat-sidenav a:hover {
+  color: grey;
+  font-size: 17px;
+}
+
 mat-sidenav-content {
   margin: 0;
 }
@@ -68,4 +73,12 @@ th.mat-column-description, td.mat-column-description {
 
 .extern i {
     color: cornflowerblue;
+}
+
+.intern a:hover {
+  color: cornflowerblue;
+}
+
+.intern a:active {
+  color: cornflowerblue;
 }
