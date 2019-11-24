@@ -1,0 +1,32 @@
+section {
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 4px;
+
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 2em;
+}
+
+p {
+    margin: 20px;
+}
+
+th.mat-column-description, td.mat-column-description {
+    padding-left: 20px;
+  }
+  
+  th.mat-column-name, td.mat-column-name {
+    padding-right: 20px;
+  }
+
+  .mat-table-sticky:first-child {
+    border-right: 1px solid #e0e0e0;
+  }

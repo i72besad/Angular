@@ -1,3 +1,4 @@
+<section>
 <h1>"Hola Mundo" en Angular</h1>
 
 <p>
@@ -14,13 +15,13 @@
     <code>ng new "nombre-app"</code>
     Como vamos a crear un “Hola Mundo” nuestro espacio de trabajo 
     se llamará hello-world:<br />
-    <code>ng new hello-world</code><br />
+    <code>ng new hello-world</code><br /><br>
     El comando new así como el comando ng tienen muchas variantes, 
     si quieres conocer más acerca de los comandos que puedes realizar 
     deberías visitar la <a routerLink="./../angular-cli">guía de Angular 
     CLI</a>.<br /><br />
-    Tras introducir el comando, Angular realiza dos preguntas:<br />
-    <img src="/assets/img/hello-world/angular-routing.png"/><br /><br />
+    Tras introducir el comando, Angular realiza dos preguntas:<br /><br>
+    <img src="/assets/img/hello-world/angular-routing.png" width="650px"/><br /><br />
     <strong>Would you like to add Angular routing? (y/N)</strong> Pregunta si 
     se desea agregar el módulo de rutas a nuestra aplicación.<br /><br />
     Este módulo consiste en un servicio que presenta un determinado componente 
@@ -28,16 +29,15 @@
     como módulo, servicio o componente. Los detallaremos más adelante.<br /><br />
     De momento estamos aprendiendo, así que escribimos N (o no escribimos nada)
     y presionamos ‘Enter’.<br /><br />
-    <img src="/assets/img/hello-world/stylesheet-format.png"/><br /><br />
+    <img src="/assets/img/hello-world/stylesheet-format.png" width="650px"/><br /><br />
     <strong>Which stylesheet format would you like to use?</strong> Angular quiere que 
     indiquemos el formato de nuestras hojas de estilo.<br /><br />
     Por simplicidad, utilizaremos CSS.<br /><br />
     Tras esto, nuestro proyecto se creará, y podremos ver que Angular ha
     creado una carpeta llamada “hello-world” con todos los ficheros necesarios
     para nuestra aplicación.<br /><br />
+<img src="/assets/img/hello-world/files-created.png" /><br />
 </p>
-
-<img src="/assets/img/hello-world/files-created.png" /><br /><br />
 <ul>
     <li>
         Carpeta e2e: Esta carpeta, cuyo nombre es "end to end", contiene una serie
@@ -96,10 +96,10 @@
 <p>
     Para lanzar la aplicación: <code>ng serve</code> Angular CLI incluye un servidor 
     para compilar y lanzar tu aplicación en local.<br />
-    <img src="/assets/img/hello-world/ng-serve.png" /><br />
+    <img src="/assets/img/hello-world/ng-serve.png" width="650px"/><br />
     Como puede observarse en la imagen, Angular escucha por defecto por 
     el puerto 4200. Si escribes en el navegador localhost:4200 o 127.0.0.1:4200:<br />
-    <img src="/assets/img/hello-world/hello-world.png" />
+    <img src="/assets/img/hello-world/hello-world.png" width="650px"/><br>
     Pero no nos detendremos aquí, y es que un hola-mundo se caracteriza por 
     su sencillez. Angular nos da una página bastante avanzada ya, así que 
     vamos a personalizarla.<br /><br />
@@ -115,34 +115,40 @@
 
 <div class="see-also">
     <h2>Vea también:</h2>
-    <a routerLink="./../ejemplos">Ejemplos de código en Angular</a><br />
-    <a routerLink="./../angular-cli">Guía de comandos de Angular CLI</a><br />
+    <p>
+        <a routerLink="./../ejemplos">Ejemplos de código en Angular</a><br />
+        <a routerLink="./../angular-cli">Guía de comandos de Angular CLI</a><br />
+    </p>
 </div>
+<br>
 
 <div class="resources">
     <h2>Recursos</h2>
-    <a href="https://angular.io/guide/setup-local" target="blank">
-        Configuración Angular
-    </a><br />
-    <a href="https://www.javaguides.net/2019/06/angular-8-hello-world-example-tutorial.html" target="blank">
-        Javaguides: hello-world-example-tutorial
-    </a><br />
-    <a href="https://devconquer.com/angular/creating-hello-world-application-in-angular-8/" target="blank">
-        DevConquer: Creating hello world application 
-    </a><br />
-    <a href="https://medium.com/ngesyfirebase/primeros-pasos-con-angular-fc739d401cfa" target="blank">
-        Medium: Primeros pasos con Angular 
-    </a><br />
-    <a href="https://stackoverflow.com/questions/54966153/what-is-angular-routing" target="blank">
-        Stackoverflow: What is Angular routing 
-    </a>
-    <a href="https://editorconfig.org/" target="blank">
-        editorconfig.org
-    </a><br />
-    <a href="https://tantacom.com/editorconfig-manten-la-misma-configuracion-de-editor-para-todos-los-miembros-de-tu-equipo/" target="blank">
-        Tantacom: editorconfig, mantener la misma configuración de editor 
-    </a><br />
-    <a href="https://blog.jotagep.com/angular-estructura-de-directorios/" target="blank">
-        Jotagep Blog: Estructura de directorios
-    </a>
+    <p>
+        <a href="https://angular.io/guide/setup-local" target="blank">
+            Configuración Angular
+        </a><br />
+        <a href="https://www.javaguides.net/2019/06/angular-8-hello-world-example-tutorial.html" target="blank">
+            Javaguides: hello-world-example-tutorial
+        </a><br />
+        <a href="https://devconquer.com/angular/creating-hello-world-application-in-angular-8/" target="blank">
+            DevConquer: Creating hello world application 
+        </a><br />
+        <a href="https://medium.com/ngesyfirebase/primeros-pasos-con-angular-fc739d401cfa" target="blank">
+            Medium: Primeros pasos con Angular 
+        </a><br />
+        <a href="https://stackoverflow.com/questions/54966153/what-is-angular-routing" target="blank">
+            Stackoverflow: What is Angular routing 
+        </a>
+        <a href="https://editorconfig.org/" target="blank">
+            editorconfig.org
+        </a><br />
+        <a href="https://tantacom.com/editorconfig-manten-la-misma-configuracion-de-editor-para-todos-los-miembros-de-tu-equipo/" target="blank">
+            Tantacom: editorconfig, mantener la misma configuración de editor 
+        </a><br />
+        <a href="https://blog.jotagep.com/angular-estructura-de-directorios/" target="blank">
+            Jotagep Blog: Estructura de directorios
+        </a>
+    </p>
 </div>
+</section>

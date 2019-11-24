@@ -1,3 +1,5 @@
+<section>
+
 <h1>Angular CLI</h1>
 <p>
     La interfaz de línea de comandos es una herramienta que nos permite 
@@ -34,12 +36,13 @@
     No activada: --noOpcionBooleana 
 </p>
 <h2>Comandos de Angular CLI</h2>
+<br>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <!--- Note that these columns can be defined in any order.
             The actual rendered columns are set as a property on the row definition" -->
     
     <!-- Name Column -->
-    <ng-container matColumnDef="name">
+    <ng-container matColumnDef="name" sticky>
         <th mat-header-cell *matHeaderCellDef> Comando </th>
         <td mat-cell *matCellDef="let element"> {{element.name}} </td>
     </ng-container>
@@ -54,4 +57,5 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
       
+</section>
       
