@@ -212,7 +212,6 @@
             {{ miNumero | currency: 'EUR' }}<br />
             {{ miFecha }}<br />
             {{ miFecha | date:'short' }}<br />
-            {{ miFecha | lowercase }}<br />
         </mat-card-content>
     </mat-card>
     
@@ -267,7 +266,15 @@
             navegación entre distintas páginas mediante la adición y sustracción
             de componentes<br />
             <mat-card class="code">
-                
+                import {{ '{' }} Routes, RouterModule {{ '}' }} from '@angular/router';<br /><br />
+                {{ '{' }}path: '', pathMatch: "full", redirectTo: ''{{ '}' }},<br />
+                {{ '{' }}path: 'departments', component: DepartmentListComponent{{ '}' }},<br />
+                {{ '{' }}path: 'departments/:id', component: DepartmentDetailComponent{{ '}' }},<br />
+                {{ '{' }}path: 'employees', component: EmployeeListComponent{{ '}' }},<br />
+                {{ '{' }}path: '**', component: PageNotFoundComponent{{ '}' }}<br /><br />
+                En el lugar donde se encuentre esta etiqueta se desplegarán
+                los componentes necesarios.<br />
+                {{ '<' }}router-outlet{{ '>' }}{{ '<' }}/router-outlet{{ '>' }}
             </mat-card>
             <!-- Ejemplo Routing -->
             <br />
@@ -282,8 +289,5 @@
 
     </section>
     
-    <!--
-        
-    -->
 </mat-sidenav-content>
 </mat-sidenav-container>
