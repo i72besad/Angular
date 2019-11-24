@@ -15,6 +15,11 @@ mat-sidenav a {
     padding : 10px 10px;
 }
 
+mat-sidenav a:hover {
+    color: grey;
+    font-size: 17px;
+}
+
 mat-sidenav-content {
     margin: 0;
 }
@@ -41,4 +46,16 @@ p {
 
 ul {
     margin-left: 50px;
+}
+
+.extern a:hover {
+    color: cornflowerblue;
+}
+
+.extern a:active {
+    color: cornflowerblue;
+}
+
+.extern i {
+    color: cornflowerblue;
 }
