@@ -8,15 +8,10 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class ArquitecturaComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
-    this.router.events.subscribe((evt) =>{
-      if (!(evt instanceof NavigationEnd)){
-        return;
-      }
-      window.scrollTo(0,0)
-    })
+
   }
 
 }
