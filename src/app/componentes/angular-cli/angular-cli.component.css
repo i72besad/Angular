@@ -54,6 +54,18 @@ th.mat-column-description, td.mat-column-description {
   }
 
   .mat-card {
-    background: black;
-    color: white;
+    background: rgb(39, 39, 39);
+    color: rgb(0, 255, 0);
   }
+
+  .extern a:hover {
+    color: cornflowerblue;
+}
+
+.extern a:active {
+    color: cornflowerblue;
+}
+
+.extern i {
+    color: cornflowerblue;
+}

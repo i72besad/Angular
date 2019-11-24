@@ -43,3 +43,14 @@ ul {
     margin-left: 50px;
 }
 
+.extern a:hover {
+    color: cornflowerblue;
+}
+
+.extern a:active {
+    color: cornflowerblue;
+}
+
+.extern i {
+    color: cornflowerblue;
+}
