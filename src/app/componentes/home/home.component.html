@@ -16,8 +16,10 @@
             <br>
             <a name="intro"><h2>¿Qué es Angular?</h2></a>
             <p>Angular es un web framework desarrollado en TypeScript y mantenido por Google que destaca
-                por la sencillez con la que podemos desarrollar aplicaciones del lado del cliente / aplicaciones web SPA (Single Page App). 
+                por la sencillez con la que podemos desarrollar aplicaciones del lado del cliente / aplicaciones web
+                 <a class="link" routerLink="./../glosario" [@aniBoton]="state" ng-mouseover="toggleBoton()">SPA</a> (Single Page App). 
             Angular es modular y se basa principalmente en lo que llaman “Componentes” que son unas clases 
+            <button [@aniBoton]="state" (click)="toggleBoton()">boton</button>
             cuyas propiedades nos permite controlar partes de la página.
             Al ser desarrollado por Google, tiene una gran comunidad detrás, haciendo que sea uno de los Front-End 
             Frameworks más utilizados en la actualidad. 
