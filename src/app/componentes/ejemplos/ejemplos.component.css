@@ -1,6 +1,33 @@
+mat-sidenav-container {
+    background-color: transparent;
+  }
+  
+  mat-sidenav {
+    background-color: transparent;
+    margin-top: 40px;
+    padding-right: 1%;
+    width: 25%;
+    line-height: 35px;
+    text-align: right;
+  }
+  
+  
+  mat-sidenav a {
+    padding : 10px 10px;
+  }
+  
+  mat-sidenav a:hover {
+    color: grey;
+    font-size: 17px;
+  }
+  
+  mat-sidenav-content {
+    margin: 0;
+  }
+
 section {
-    margin-left: 500px;
-    margin-right: 500px;
+    /*margin-left: 500px;*/
+    margin-right: 33%;
     margin-top: 40px;
     margin-bottom: 20px;
     padding: 20px;
@@ -11,4 +38,20 @@ section {
 .code {
     background: rgb(39, 39, 39);
     color: rgb(0, 255, 0);
+}
+
+mat-card {
+    margin: 20px;
+}
+
+input {
+    margin: 10px;
+}
+
+button {
+    margin: 20px;
+}
+
+h3 {
+    display: inline-block;
 }

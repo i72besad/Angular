@@ -1,51 +1,204 @@
-<section>
+<mat-sidenav-container class="example-container">
+<mat-sidenav mode="side" opened>
+    <a routerLink="./" fragment="interpolation">Interpolación</a><br />
+    <a routerLink="./" fragment="bind-prop">Enlace de Propiedad</a><br />
+    <a routerLink="./" fragment="bind-style">Enlace de Estilo</a><br />
+    <a routerLink="./" fragment="bind-class">Enlace de Clase</a><br />
+    <a routerLink="./" fragment="bind-event">Enlace de Evento</a><br />
+    <a routerLink="./" fragment="two-way-bind">Enlace Bidireccional</a><br />
+    <a routerLink="./" fragment="directive">Uso de Directivas</a><br />
+    <a routerLink="./" fragment="pipes">Uso de Tuberías o Pipes</a><br />
+    <a routerLink="./" fragment="template">Variables de Referencia de Plantillas</a><br />
+    <a routerLink="./" fragment="inputoutput">Input-Output</a><br />
+    <a routerLink="./" fragment="routing">Routing</a><br />
+    <a routerLink="./" fragment="see-also">Vea también</a><br />
+    <a routerLink="./" fragment="resources">Recursos</a><br />
+</mat-sidenav>
+<mat-sidenav-content>
+    <section>
+    <h1>Ejemplos</h1>
+    <!--
+        INDICE:
+            - Componentes
+            - Modulos
+            - Servicios
+            - Directivas
+            - Interpolacion
+            - Bind properties, style, class, event
+            - Two Way Binding
+            - Pipes
+            - Template Reference Variable
+            - Input, Output
+            - Routing
+    -->
+    <p>
+        A continuación te mostramos algunos ejemplos de lo que se puede hacer con Angular
+    </p>
+    
+    <!-- Interpolación -->
+    <a name="interpolation"></a><mat-card>
+        <mat-card-title>Interpolación</mat-card-title>
+        <mat-card-content>
+            Angular permite alterar la vista introduciendo nuevos valores para las
+            propiedades de los componentes, además de poder mostrar su valor
+            mediante la <strong>interpolación</strong>.
+            Esto da lugar a aplicaciones interactivas que cambian dependiendo
+            de las acciones del usuario.<br /><br />La sintaxis de la interpolación
+            es la siguiente:
+            <mat-card class="code">
+                {{ '{' }}{{ '{' }}propiedad{{ '}' }}{{ '}' }}
+            </mat-card>
+            Escriba un valor para la propiedad, envíelo y verá como la vista
+            es modificada. <br />
+            <!-- Ejemplo interpolación -->
+            <input #myInput type="text" value="Escriba aquí">
+            <button mat-raised-button (click)="onClickInterpolation(myInput.value)">Enviar valor</button>
+            Me llamo {{name}}
+            <br />
+        </mat-card-content>
+    </mat-card>
+    
+    <!-- Enlace de Propiedad -->
+    <a name="bind-prop"></a><mat-card>
+        <mat-card-title>Enlace de Propiedad</mat-card-title>
+        <mat-card-content>
+            Los siguientes inputs asocian su atributo <strong>disabled</strong> a una variable
+            definida en la clase de Javascript denominada <em>isDisabled</em><br /><br />
+            Podemos cambiar el valor de esta propiedad con un simple click a un
+            botón.<br /><br />La sintaxis del enlace de propiedad es la siguiente:<br />
+            <mat-card class="code">
+                {{ '[' }}atributoHTML{{ ']' }} = "miAtributo"
+            </mat-card>
+            <!-- Ejemplo enlace de propiedad -->
+            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
+            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+            <br />
+        </mat-card-content>
+    </mat-card>
+    
+    <!-- Enlace de Estilo -->
+    <a name="bind-style"></a><mat-card>
+        <mat-card-title>Enlace de Estilo</mat-card-title>
+        <mat-card-content>
+            Su funcionamiento es el mismo que para el enlace de propiedad, 
+            modificar una propiedad determinada del estilo de un elemento.<br />
+            <br />La sintaxis del enlace de estilo es la siguiente:<br />
+            <mat-card class="code">
+                {{ '[' }}propiedadCSS{{ ']' }} = "miEstilo"
+            </mat-card>
+            <!-- Ejemplo enlace de estilo -->
+            <button mat-stroked-button (click)="onClickStyle()">Cambiar estilo</button>
+            <h3 [style.color]="myColor">Texto de Ejemplo</h3>
+            <br />
+        </mat-card-content>
+    </mat-card>
+    
+    <!-- Enlace de Clase -->
+    <a name="bind-class"></a><mat-card>
+        <mat-card-title>Enlace de Clase</mat-card-title>
+        <mat-card-content>
+            Su funcionamiento es el mismo que para el enlace de propiedad
+            <!-- Ejemplo enlace de clase -->
+            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
+            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+            <br />
+        </mat-card-content>
+    </mat-card>
+    
+    <!-- Enlace de Evento -->
+    <a name="bind-event"></a><mat-card>
+        <mat-card-title>Enlace de Evento</mat-card-title>
+        <mat-card-content>
+            Su funcionamiento es el mismo que para el enlace de propiedad
+            <!-- Ejemplo enlace de evento -->
+            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
+            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+            <br />
+        </mat-card-content>
+    </mat-card>
+    
+    <!-- Enlace de Bidireccional -->
+    <a name="two-way-bind"></a><mat-card>
+        <mat-card-title>Enlace Bidireccional</mat-card-title>
+        <mat-card-content>
+            Su funcionamiento es el mismo que para el enlace de propiedad
+            <!-- Ejemplo enlace bidireccional -->
+            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
+            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+            <br />
+        </mat-card-content>
+    </mat-card>
+    
+    <!-- Uso de directivas -->
+    <a name="directive"></a><mat-card>
+        <mat-card-title>Uso de Directivas</mat-card-title>
+        <mat-card-content>
+            Su funcionamiento es el mismo que para el enlace de propiedad
+            <!-- Ejemplo uso de directivas -->
+            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
+            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+            <br />
+        </mat-card-content>
+    </mat-card>
+    
+    <!-- Uso de Pipes -->
+    <a name="pipes"></a><mat-card>
+        <mat-card-title>Uso de Tuberías o Pipes</mat-card-title>
+        <mat-card-content>
+            Su funcionamiento es el mismo que para el enlace de propiedad
+            <!-- Ejemplo uso de pipes -->
+            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
+            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+            <br />
+        </mat-card-content>
+    </mat-card>
+    
+    <!-- Template Reference Variables -->
+    <a name="template"></a><mat-card>
+        <mat-card-title>Variables de Referencia de Plantilla</mat-card-title>
+        <mat-card-content>
+            Su funcionamiento es el mismo que para el enlace de propiedad
+            <!-- Ejemplo Template Reference Variables -->
+            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
+            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+            <br />
+        </mat-card-content>
+    </mat-card>
+    
+    <!-- Input, Output -->
+    <a name="input-output"></a><mat-card>
+        <mat-card-title>Input, Output</mat-card-title>
+        <mat-card-content>
+            Su funcionamiento es el mismo que para el enlace de propiedad
+            <!-- Ejemplo Input, Output -->
+            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
+            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+            <br />
+        </mat-card-content>
+    </mat-card>
+    
+    <!-- Routing -->
+    <a name="routing"></a><mat-card>
+        <mat-card-title>Routing</mat-card-title>
+        <mat-card-content>
+            Su funcionamiento es el mismo que para el enlace de propiedad
+            <!-- Ejemplo Routing -->
+            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
+            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+            <br />
+        </mat-card-content>
+    </mat-card>
+    
+    <a name="see-also"><h3>Vea también</h3></a>
+    <a name="resources"><h3>Recursos</h3></a>
 
-<h1>Ejemplos</h1>
-<!--
-    INDICE:
-        - Componentes
-        - Modulos
-        - Botón que active y desactive un componente
-        - Uso de directivas
-        - Uso de pipes
-        - Servicios
-        - Interpolacion
-        - Bind properties, class, event
-        - Two Way Binding
-        - Template Reference Variable
-        - Input, Output
-        - Routing
--->
-<p>
-    A continuación te mostramos algunos ejemplos de lo que se puede hacer con Angular
-</p>
-
-
-<mat-card>
-    <mat-card-title>Interpolación</mat-card-title>
-    <mat-card-content>
+    </section>
+    
+    <!--
         La principal característica de Angular es que la modificación de la
-        vista puede alterar el modelo de nuestra aplicación, alterando a su
-        vez la vista de nuevo. <br /><br />Para mostrar el valor de una
-        determinada propiedad se utiliza la interpolación cuya sintaxis es:
-        <mat-card class="code">
-            {{ '{' }}{{ '{' }}variable{{ '}' }}{{ '}' }}
-        </mat-card>
-        <input type="text" value="Escriba aquí">
-        Me llamo {{name}}
-        <br />
-    </mat-card-content>
-</mat-card>
-
-<mat-card>
-    <mat-card-title>Enlace de Propiedad</mat-card-title>
-    <mat-card-content>
-        Los siguientes inputs asocian su atributo <strong>disabled</strong> a una variable
-        definida en la clase de Javascript denominada <em>isDisabled</em>
-        <button mat-stroked-button (click)="onClick()">Cambiar propiedad</button>
-        <input [disabled]="isDisabled" type="text" value="Escriba aquí">
-        <br />
-    </mat-card-content>
-</mat-card>
-
-</section>
+            vista puede alterar el modelo de nuestra aplicación, alterando a su
+            vez la vista de nuevo. <br /><br />Para mostrar el valor de una
+            determinada propiedad se utiliza la interpolación cuya sintaxis es:
+    -->
+</mat-sidenav-content>
+</mat-sidenav-container>
