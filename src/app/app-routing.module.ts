@@ -5,8 +5,8 @@ import { InstalacionComponent } from './componentes/instalacion/instalacion.comp
 import { HolaMundoComponent } from './componentes/hola-mundo/hola-mundo.component';
 import { AngularCliComponent } from './componentes/angular-cli/angular-cli.component';
 import { EjemplosComponent } from './componentes/ejemplos/ejemplos.component';
-import { EjerciciosComponent } from './componentes/ejercicios/ejercicios.component';
 import { GlosarioComponent } from './componentes/glosario/glosario.component';
+import { AboutUsComponent } from './componentes/about-us/about-us.component';
 import { PageNotFoundComponent } from './componentes/page-not-found/page-not-found.component';
 
 
@@ -17,8 +17,8 @@ const routes: Routes = [
   {path: 'hola-mundo', component: HolaMundoComponent},
   {path: 'angular-cli', component: AngularCliComponent},
   {path: 'ejemplos', component: EjemplosComponent},
-  {path: 'ejercicios', component: EjerciciosComponent},
   {path: 'glosario', component: GlosarioComponent},
+  {path: 'about-us', component: AboutUsComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
@@ -32,6 +32,6 @@ export const routingComponents = [HomeComponent,
                                   HolaMundoComponent,
                                   AngularCliComponent,
                                   EjemplosComponent,
-                                  EjerciciosComponent,
                                   GlosarioComponent,
+                                  AboutUsComponent,
                                   PageNotFoundComponent]

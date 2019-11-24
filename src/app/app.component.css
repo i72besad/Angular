@@ -1,4 +1,11 @@
-span {
+@import url('https://fonts.googleapis.com/css?family=ABeeZee|Acme|Pacifico|Permanent+Marker|Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Archivo|Exo|Overpass|PT+Sans+Caption|Righteous|Signika&display=swap');
+
+html {
+    height: 100%;
+}
+
+#header {
     background: white;
     text-align: center;
     margin: auto;
@@ -6,9 +13,18 @@ span {
     box-shadow: 2px 2px 10px #666;
 }
 
+#container {
+    min-height: 100%;
+    position: relative;
+}
+
+#content {
+    padding-bottom: 150px;
+}
+
 nav {
     text-align: center;
-    padding: 0.5em;
+    padding: 0.7em;
     background: #1976d2;
     box-shadow: 2px 2px 10px #666;
 }
@@ -26,4 +42,31 @@ nav a:active {
     color: #dd0031;
 }
 
+footer {
+    height:120px;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    background: linear-gradient(to bottom, rgb(25, 118, 210), rgb(24, 91, 158));
+    box-shadow: 2px 2px 10px #666;
+    text-align:center;
+    color:white;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    align-items: center;
+}
 
+#about {
+    font-family: 'Roboto Slab', Roboto, "Helvetica Neue", sans-serif;   
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+}
+
+#footer {
+    font-family: 'Roboto Slab', Roboto, "Helvetica Neue", sans-serif;   
+    font-size: 3em;
+    color: rgba(0, 0, 0, 0.219);
+}
+
+#github {
+}

@@ -6,13 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular 8';
+  linkRepo = 'https://github.com/i72besad/Angular.git';
   secciones = [
     "Instalación",
     "Hola-Mundo",
     "Angular-CLI",
     "Ejemplos",
-    "Ejercicios",
     "Glosario"
   ]
 }

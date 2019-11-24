@@ -1,9 +1,24 @@
-<span>
+<span id="header">
   <a routerLink="/"><img src="/assets/img/angular-logo.png" width="150px"/></a>
 </span>
 
-<nav>
-  <a routerLink="/{{seccion | lowercase}}" *ngFor="let seccion of secciones">{{seccion}}</a>
-</nav>
+<div id="container">
 
-<router-outlet></router-outlet>
+  <div id="content">
+    <nav>
+      <a routerLink="/{{seccion | lowercase}}" *ngFor="let seccion of secciones">{{seccion}}</a>
+    </nav>
+  
+    <router-outlet></router-outlet>
+  </div>
+
+  <footer>
+    <a id="about" title="Información del equipo de desarrollo detrás de este tutorial"routerLink="/about-us">Sobre Nosotros</a>
+    <span id="footer" title="El entusiasmo es la esencia de la sinceridad">angular-tutorial</span>
+    <a id="github" title="Repositorio de GitHub"[href]="linkRepo" target="blank">
+      <img width="70px" src="/assets/img/github-logo-3.png" />
+    </a>
+  </footer>
+
+</div>
+
