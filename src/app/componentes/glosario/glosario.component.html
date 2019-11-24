@@ -1,74 +1,87 @@
-
-<section>
-<h1>Glosario</h1>
-<br>
-<p>En este apartado os dejaremos palabras clave que, a nuestro juicio, son necesarias saber para
-     entender Angular.
-</p>
-<br>
-
-
-<h3>Framework</h3>
-<p>Software abstracto que ofrece funciones
-     genéricas para ser utilizadas o adaptadas por el código del desarrollador y 
-     facilitar así el desarrollo de aplicaciones específicas.</p>
-     <br>
-
-
-<h3>Web Framework</h3>
-<p> Framework diseñado para el desarrollo de aplicaciones web, APIs u otro tipo de recursos. Nos permite automatizar
-     parte del desarrollo web y desarrollar sitios web dinámicos.
-</p>
-<br>
-
-<h3>SPA</h3>
-<p>Un SPA (Single Page Application) Es un sitio web que interactúa con el 
-    usuario de forma dinámica reescribiendo la página en vez de recargar una nueva desde el servidor.
-    Todo el código necesario (HTML, CSS y JavaScript) se carga una sola vez, mientras que los recursos se cargan y descargan
- de forma dinámica respondiendo a las acciones del usuario.</p>
- <br>
-
- <h3>JSON</h3>
- <p>JSON (JavaScript Object Notation) es un formato estándar abierto basado en texto que se utiliza
-      para serializar y transmitir datos estructurados, normalmente entre un servidor y una aplicación web.</p>
-      <br>
-
-<h3>MVC</h3>
-<p>El Modelo Vista Controlador (MVC) es un estilo de arquitectura de software que separa los datos
-        de una aplicación, la interfaz de usuario, y la lógica de control en tres componentes distintos.</p>
-   <ul>
-                <li>
-                        El <b>Modelo</b> que contiene una representación de los datos que maneja el sistema, 
-                        su lógica de negocio, y sus mecanismos de persistencia.
-                </li>
-                <li>
-                        La <b>Vista</b>, o interfaz de usuario, que compone la información que se envía al cliente
-                         y los mecanismos interacción con éste.
-                </li>
-                <li>
-                        El <b>Controlador</b>, que actúa como intermediario entre el Modelo y la Vista, gestionando el flujo de
-                         información entre ellos y las transformaciones para adaptar los datos a las necesidades de cada uno.
-                </li>
-   </ul>
-
-   <br>
-
-
-<h3>Lógica de Negocio</h3>
-<p>Existen dos formas de clasificar el código: la lógica de infraestructura y la lógica de negocio. 
-    La primera es la necesaria para que nuestro programa funcione (Ej: Si la petición HTTP no tiene respuesta, 
-    intentar de nuevo en 5 segundos), la segunda consiste
-     en las reglas definidas por el propio negocio (Ej: Si el usuario compra 2 productos, 
-     aplicar descuento; si no, no aplicar descuento).</p>
-     <br>
-
-
-<h3>Lint</h3>
-<p>Herramienta de programación utilizada para detectar código sospechoso en cualquier programa, 
-    busca usos de variables antes de ser inicializadas o creadas, condiciones siempre verdaderas 
-    o siempre falsas o cálculos cuyos resultados probablemente caigan fuera
-     del rango permitido por las variables utilizadas, entre otros. El linting es el proceso 
-     en el que se realiza este test al código fuente.</p>
-     <br>
-
-    </section>
+<mat-sidenav-container class="example-container">
+          <mat-sidenav mode="side" opened>
+              <a routerLink="./" fragment="framework">Framework</a><br />
+              <a routerLink="./" fragment="web-framework">Web Framework</a><br />
+              <a routerLink="./" fragment="spa">SPA</a><br />
+              <a routerLink="./" fragment="json">JSON</a><br />
+              <a routerLink="./" fragment="mvc">MVC</a><br />
+              <a routerLink="./" fragment="logica-negocio">Lógica de negocio</a><br />
+              <a routerLink="./" fragment="lint">Lint</a><br />
+              <a routerLink="./" fragment="resources">Recursos</a><br />
+          </mat-sidenav>
+          <mat-sidenav-content>
+               <section>
+               <h1>Glosario</h1>
+               <br>
+               <p>En este apartado os dejaremos palabras clave que, a nuestro juicio, son necesarias saber para
+                    entender Angular.
+               </p>
+               <br>
+               
+               
+               <a name="framework"><h3>Framework</h3></a>
+               <p>Software abstracto que ofrece funciones
+                    genéricas para ser utilizadas o adaptadas por el código del desarrollador y 
+                    facilitar así el desarrollo de aplicaciones específicas.</p>
+                    <br>
+               
+               
+               <a name="web-framework"><h3>Web Framework</h3></a>
+               <p> Framework diseñado para el desarrollo de aplicaciones web, APIs u otro tipo de recursos. Nos permite automatizar
+                    parte del desarrollo web y desarrollar sitios web dinámicos.
+               </p>
+               <br>
+               
+               <a name="spa"><h3>SPA</h3></a>
+               <p>Un SPA (Single Page Application) Es un sitio web que interactúa con el 
+                    usuario de forma dinámica reescribiendo la página en vez de recargar una nueva desde el servidor.
+                    Todo el código necesario (HTML, CSS y JavaScript) se carga una sola vez, mientras que los recursos se cargan y descargan
+                    de forma dinámica respondiendo a las acciones del usuario.</p>
+                    <br>
+               
+                    <a name="json"><h3>JSON</h3></a>
+                    <p>JSON (JavaScript Object Notation) es un formato estándar abierto basado en texto que se utiliza
+                         para serializar y transmitir datos estructurados, normalmente entre un servidor y una aplicación web.</p>
+                         <br>
+               
+               <a name="mvc"><h3>MVC</h3></a>
+               <p>El Modelo Vista Controlador (MVC) es un estilo de arquitectura de software que separa los datos
+                         de una aplicación, la interfaz de usuario, y la lógica de control en tres componentes distintos.</p>
+                    <ul>
+                                   <li>
+                                        El <b>Modelo</b> que contiene una representación de los datos que maneja el sistema, 
+                                        su lógica de negocio, y sus mecanismos de persistencia.
+                                   </li>
+                                   <li>
+                                        La <b>Vista</b>, o interfaz de usuario, que compone la información que se envía al cliente
+                                        y los mecanismos interacción con éste.
+                                   </li>
+                                   <li>
+                                        El <b>Controlador</b>, que actúa como intermediario entre el Modelo y la Vista, gestionando el flujo de
+                                        información entre ellos y las transformaciones para adaptar los datos a las necesidades de cada uno.
+                                   </li>
+                    </ul>
+               
+                    <br>
+               
+               
+               <a name="logica-negocio"><h3>Lógica de Negocio</h3></a>
+               <p>Existen dos formas de clasificar el código: la lógica de infraestructura y la lógica de negocio. 
+                    La primera es la necesaria para que nuestro programa funcione (Ej: Si la petición HTTP no tiene respuesta, 
+                    intentar de nuevo en 5 segundos), la segunda consiste
+                    en las reglas definidas por el propio negocio (Ej: Si el usuario compra 2 productos, 
+                    aplicar descuento; si no, no aplicar descuento).</p>
+                    <br>
+               
+               
+               <a name="lint"><h3>Lint</h3></a>
+               <p>Herramienta de programación utilizada para detectar código sospechoso en cualquier programa, 
+                    busca usos de variables antes de ser inicializadas o creadas, condiciones siempre verdaderas 
+                    o siempre falsas o cálculos cuyos resultados probablemente caigan fuera
+                    del rango permitido por las variables utilizadas, entre otros. El linting es el proceso 
+                    en el que se realiza este test al código fuente.</p>
+                    <br>
+               <a name="resources"><h2>Recursos</h2></a>
+               </section>
+          </mat-sidenav-content>
+</mat-sidenav-container>

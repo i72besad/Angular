@@ -15,12 +15,12 @@ export class AngularCliComponent implements OnInit {
 }*/
 import {Component, OnInit} from '@angular/core';
 
-export interface PeriodicElement {
+export interface Command {
   name: string;
   description: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
+const ELEMENT_DATA: Command[] = [
   {name: 'add', description: 'Añadir paquetes a nuestra aplicación'},
   {name: 'analytics', description: 'Configures the gathering of Angular CLI usage metrics.'},
   {name: 'build', description: 'Compila una aplicación de Angular en un diretorio de salida denominado dist/ en la ruta dada. Debe ejecutarse dentro del directorio del proyecto'},

@@ -1,167 +1,169 @@
-<section>
-<h1>Instalación de Angular</h1>
-<br>
-<!--
-    ÍNDICE: 
-Prerrequisitos
-Linux
-Windows
-Mac OS
-Instalación
-Vea también
-Recursos
--->
-<!-- Prerrequisitos de instalacion -->
-<h2>Prerrequisitos</h2>
-<br>
-<h3>Node.js</h3>
-<p>
-    Angular precisa de la versión 10.9.0 (o superior) de Node.js.
-</p>
-<ul>
-    <li>
-        Para ver tu versión, utiliza <code>node -v</code> desde una terminal.
-    </li>
-    <li>
-        Para obtener Node.js, visita nodejs.org o sigue estos pasos:
-    </li>
-</ul>
-<br>
-
-<h3>Gestor de paquetes npm</h3>
-<p>
-    Algunas de las funciones de Angular dependen de librerías que se 
-    encuentran disponibles desde el gestor npm.<br />
-    Por defecto, npm se instala con Node.js. Utiliza <code>npm -v</code> tras instalarlo
-    para verificar que también lo tienes.
-</p>
-<br>
-
-<!-- Instalar Node-js en Linux -->
-<h3>Linux</h3>
-<p>
-    Nota: Estos pasos se aplican sólo para distribuciones basadas en Debian y
-    Ubuntu, si no es tu caso, visita <a href="nodejs.org">nodejs.org</a>.
-</p>
-<p>
-    NodeSource proporciona, desde 
-    <a href="https://github.com/nodesource/distributions/blob/master/README.md" target="blank">
-    este repositorio</a>, los paquetes con Node.js.
-</p>
-
-<p>
-    Para instalar la última versión LTS (a día 16/11/2019 es la versión 12.13.0)
-    <code>curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-    sudo apt-get install -y nodejs</code>
-</p>
-
-<p>
-    Comprueba tu versión de Node.js: <code>node -v</code><br />
-    Comprueba tu versión del gestor de paquetes npm: <code>npm -v</code>
-</p>
-
-<img src="/assets/img/install/check-version-node.png" width="650px"/>
-
-<br>
-
-<!-- Instalar Node-js en Windows -->
-<h3>Windows</h3>
-<p>
-    Entra a nodejs.org, descarga la versión más reciente (archivo .msi) y 
-    ejecuta el instalador. Sigue los pasos y habrás instalado Node.js
-</p>
-
-<img src="/assets/img/install/win.jpg" width="500px"/>
-
-<p>
-    Cuando termine, ejecuta Windows Powershell y comprueba tu versión de
-    Node.js con <code>node -v</code> y la del gestor de paquetes npm 
-    con <code>npm -v</code>
-</p>
-
-<img src="/assets/img/install/check-node-win.jpg" width="650px"/>
-
-<!-- Instalar Node-js en Mac OS -->
-<h3>Mac OS</h3>
-<p>
-    Entra a nodejs.org descarga la versión más reciente (archivo .pkg) y
-    ejecuta el instalador. Sigue los pasos y habrás instalado Node.js
-</p>
-
-<img src="/assets/img/install/mac.png" width="500px"/>
-
-<p>
-    Una vez finalizado, abre bash y verifica que Node.js y npm están 
-    instalados con <code>node -v</code> y <code>npm -v</code>
-</p>
-
-<img src="/assets/img/install/check-node-mac.png" width="650px"/>
-<br>
-
-<!-- Instalacion -->
-<h2>Instalación</h2>
-
-<p>
-    Instala Angular CLI (Angular Command Line Interface), desde donde podrás
-    crear tus proyectos, generar aplicaciones y librerías, además de llevar a
-    cabo una gran cantidad de tareas de desarrollo (testing, empaquetado
-    de aplicaciones y despliegue de las mismas).<br /><br />
-    La instalación de Angular CLI es independiente del sistema operativo.
-    Para instalar Angular CLI:<br />
-    <code>npm install -g @angular/cli</code><br /><br />
-    El gestor de paquetes comenzará a trabajar y en unos instantes 
-    podremos empezar a trabajar con Angular.
-</p>
-
-<img src="/assets/img/install/installing-cli.png" width="650px"/>
-
-<p>Para verificar que la instalación se ha realizado correctamente utiliza:<br>
-    <code>ng --version</code>
-</p>
-
-
-
-<p>
-    Debería aparecer una ventana como esta:<br /><br>
-    En Linux<br />
-    <img src="/assets/img/install/cli-linux.png" width="500px"/><br /><br>
-    En Windows<br />
-    <img src="/assets/img/install/cli-win.jpg" width="500px"/><br /><br>
-    En Mac OS<br />
-    <img src="/assets/img/install/cli-mac.png" width="500px"/><br />
-</p>
-
-<p>
-    ¡Felicidades! Ya puedes empezar a trabajar con Angular.
-    Ahora puedes crear tu primer proyecto en Angular o investigar
-    un poco más acerca del funcionamiento de Angular CLI.  
-</p>
-
-<!-- Ver Tambien -->
-<div class="see-also">
-    <h2>Vea también:</h2>
-    <p>
-        <a routerLink="./../hola-mundo">Hola Mundo en Angular</a><br />
-        <a routerLink="./../angular-cli">Guía de comandos de Angular CLI</a><br />
-    </p>
-</div>
-
-<!-- Recursos -->
-<div classs="resources">
-    <h2>Recursos:</h2>
-    <p>
-        <a href="https://angular.io/guide/setup-local" target="blank">
-            Instalación en Angular Oficial
-        </a><br />
-        <a href="https://nodejs.org/en/download/" target="blank">
-            Página Oficial de Node.js
-        </a><br />
-        <a href="https://nodejs.org/en/download/package-manager/" target="blank">
-            Descarga de Node mediante el gestor de paquetes
-        </a><br />
-        <a href="https://github.com/nodesource/distributions/blob/master/README.md" target="blank">
-            Distribuciones de Node.js por NodeSource para derivados de Debian
-        </a><br />
-    </p>
-</div>
-</section>
+<mat-sidenav-container class="example-container">
+        <mat-sidenav mode="side" opened>
+            <a routerLink="./" fragment="prerrequisites">Prerrequisitos</a><br />
+            <a routerLink="./" fragment="linux">Linux</a><br />
+            <a routerLink="./" fragment="windows">Windows</a><br />
+            <a routerLink="./" fragment="mac">Mac</a><br />
+            <a routerLink="./" fragment="install">Instalación</a><br />
+            <a routerLink="./" fragment="see-also">Vea también</a><br />
+            <a routerLink="./" fragment="resources">Recursos</a><br />
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <section>
+            <h1>Instalación de Angular</h1>
+            <br>
+            <a name="prerrequisites"><h2>Prerrequisitos</h2></a>
+            <br>
+            <h3>Node.js</h3>
+            <p>
+                Angular precisa de la versión 10.9.0 (o superior) de Node.js.
+            </p>
+            <ul>
+                <li>
+                    Para ver tu versión, utiliza <code>node -v</code> desde una terminal.
+                </li>
+                <li>
+                    Para obtener Node.js, visita nodejs.org o sigue estos pasos:
+                </li>
+            </ul>
+            <br>
+            
+            <h3>Gestor de paquetes npm</h3>
+            <p>
+                Algunas de las funciones de Angular dependen de librerías que se 
+                encuentran disponibles desde el gestor npm.<br />
+                Por defecto, npm se instala con Node.js. Utiliza <code>npm -v</code> tras instalarlo
+                para verificar que también lo tienes.
+            </p>
+            <br>
+            
+            <!-- Instalar Node-js en Linux -->
+            <a name="linux"><h3>Linux</h3></a>
+            <p>
+                Nota: Estos pasos se aplican sólo para distribuciones basadas en Debian y
+                Ubuntu, si no es tu caso, visita <a href="nodejs.org">nodejs.org</a>.
+            </p>
+            <p>
+                NodeSource proporciona, desde 
+                <a href="https://github.com/nodesource/distributions/blob/master/README.md" target="blank">
+                este repositorio</a>, los paquetes con Node.js.
+            </p>
+            
+            <p>
+                Para instalar la última versión LTS (a día 16/11/2019 es la versión 12.13.0)
+                <code>curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+                sudo apt-get install -y nodejs</code>
+            </p>
+            
+            <p>
+                Comprueba tu versión de Node.js: <code>node -v</code><br />
+                Comprueba tu versión del gestor de paquetes npm: <code>npm -v</code>
+            </p>
+            
+            <img src="/assets/img/install/check-version-node.png" width="650px"/>
+            
+            <br>
+            
+            <!-- Instalar Node-js en Windows -->
+            <a name="windows"><h3>Windows</h3></a>
+            <p>
+                Entra a nodejs.org, descarga la versión más reciente (archivo .msi) y 
+                ejecuta el instalador. Sigue los pasos y habrás instalado Node.js
+            </p>
+            
+            <img src="/assets/img/install/win.jpg" width="500px"/>
+            
+            <p>
+                Cuando termine, ejecuta Windows Powershell y comprueba tu versión de
+                Node.js con <code>node -v</code> y la del gestor de paquetes npm 
+                con <code>npm -v</code>
+            </p>
+            
+            <img src="/assets/img/install/check-node-win.jpg" width="650px"/>
+            
+            <!-- Instalar Node-js en Mac OS -->
+            <a name="mac"><h3>Mac OS</h3></a>
+            <p>
+                Entra a nodejs.org descarga la versión más reciente (archivo .pkg) y
+                ejecuta el instalador. Sigue los pasos y habrás instalado Node.js
+            </p>
+            
+            <img src="/assets/img/install/mac.png" width="500px"/>
+            
+            <p>
+                Una vez finalizado, abre bash y verifica que Node.js y npm están 
+                instalados con <code>node -v</code> y <code>npm -v</code>
+            </p>
+            
+            <img src="/assets/img/install/check-node-mac.png" width="650px"/>
+            <br>
+            
+            <!-- Instalacion -->
+            <a name="install"><h2>Instalación</h2></a>
+            
+            <p>
+                Instala Angular CLI (Angular Command Line Interface), desde donde podrás
+                crear tus proyectos, generar aplicaciones y librerías, además de llevar a
+                cabo una gran cantidad de tareas de desarrollo (testing, empaquetado
+                de aplicaciones y despliegue de las mismas).<br /><br />
+                La instalación de Angular CLI es independiente del sistema operativo.
+                Para instalar Angular CLI:<br />
+                <code>npm install -g @angular/cli</code><br /><br />
+                El gestor de paquetes comenzará a trabajar y en unos instantes 
+                podremos empezar a trabajar con Angular.
+            </p>
+            
+            <img src="/assets/img/install/installing-cli.png" width="650px"/>
+            
+            <p>Para verificar que la instalación se ha realizado correctamente utiliza:<br>
+                <code>ng --version</code>
+            </p>
+            
+            
+            
+            <p>
+                Debería aparecer una ventana como esta:<br /><br>
+                En Linux<br />
+                <img src="/assets/img/install/cli-linux.png" width="500px"/><br /><br>
+                En Windows<br />
+                <img src="/assets/img/install/cli-win.jpg" width="500px"/><br /><br>
+                En Mac OS<br />
+                <img src="/assets/img/install/cli-mac.png" width="500px"/><br />
+            </p>
+            
+            <p>
+                ¡Felicidades! Ya puedes empezar a trabajar con Angular.
+                Ahora puedes crear tu primer proyecto en Angular o investigar
+                un poco más acerca del funcionamiento de Angular CLI.  
+            </p>
+            
+            <!-- Ver Tambien -->
+            <div class="see-also">
+                <a name="see-also"><h2>Vea también:</h2></a>
+                <p>
+                    <a routerLink="./../hola-mundo">Hola Mundo en Angular</a><br />
+                    <a routerLink="./../angular-cli">Guía de comandos de Angular CLI</a><br />
+                </p>
+            </div>
+            
+            <!-- Recursos -->
+            <div classs="resources">
+                    <a name="resources"><h2>Recursos:</h2></a>
+                <p>
+                    <a href="https://angular.io/guide/setup-local" target="blank">
+                        Instalación en Angular Oficial
+                    </a><br />
+                    <a href="https://nodejs.org/en/download/" target="blank">
+                        Página Oficial de Node.js
+                    </a><br />
+                    <a href="https://nodejs.org/en/download/package-manager/" target="blank">
+                        Descarga de Node mediante el gestor de paquetes
+                    </a><br />
+                    <a href="https://github.com/nodesource/distributions/blob/master/README.md" target="blank">
+                        Distribuciones de Node.js por NodeSource para derivados de Debian
+                    </a><br />
+                </p>
+            </div>
+            </section>
+        </mat-sidenav-content>
+    </mat-sidenav-container>

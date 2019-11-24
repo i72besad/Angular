@@ -1,61 +1,74 @@
-<section>
+<mat-sidenav-container class="example-container">
+        <mat-sidenav mode="side" opened>
+            <a routerLink="./" fragment="install">Instalar Angular CLI</a><br />
+            <a routerLink="./" fragment="config">Configurar Angular CLI</a><br />
+            <a routerLink="./" fragment="syntax">Sintaxis</a><br />
+            <a routerLink="./" fragment="comandos">Comandos</a><br />
+            <a routerLink="./" fragment="see-also">Vea también</a><br />
+            <a routerLink="./" fragment="resources">Recursos</a><br />
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <section>
+            <h1>Angular CLI</h1>
+            <p>
+                La interfaz de línea de comandos es una herramienta que nos permite 
+                inicializar, desarrollar, construir y mantener las aplicaciones de Angular.
+                Para usarla sólo necesitas tu terminal favorita, aunque también está 
+                disponible con interfaz de usuario a través de una extensión en VS Code.
+            </p>
+            
+            <a name="install"><h2>Instalar Angular CLI</h2></a>
+            <p>
+                <code>npm install -g @angular/cli</code>
+                Instalamos Angular CLI desde el gestor de paquete npm. La opción -g indica 
+                que lo instale de forma que el módulo pueda ser accedido desde cualquier 
+                punto del sistema de archivos.
+            </p>
+            
+            <a name="config"><h2>Configurar Angular CLI</h2></a>
+            <p>
+                Podemos establecer la configuración del CLI para cada proyecto, esta 
+                configuración se encuentra en el fichero angular.json, que podemos editar 
+                directamente, o con el comando: <br /> 
+                <code>ng config</code>
+            </p>
+            
+            <a name="syntax"><h2>Sintaxis</h2></a>
+            <p>
+                <em>ng commandNameOrAlias requiredArg [optionalArg] [options]</em>
+            </p>
+            
+            <h3>Opciones Booleanas</h3>
+            <p>
+                Pueden escribirse de dos formas:
+                Activada: --opcionBooleana
+                No activada: --noOpcionBooleana 
+            </p>
+            <a name="comandos"><h2>Comandos de Angular CLI</h2></a>
+            <br>
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                <!--- Note that these columns can be defined in any order.
+                        The actual rendered columns are set as a property on the row definition" -->
+                
+                <!-- Name Column -->
+                <ng-container matColumnDef="name" sticky>
+                    <th mat-header-cell *matHeaderCellDef> Comando </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+                
+                <!-- Description Column -->
+                <ng-container matColumnDef="description">
+                    <th mat-header-cell *matHeaderCellDef> Descripción </th>
+                    <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                </ng-container>
+                    
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <a name="see-also"><h2>Vea también:</h2></a>
+            <a name="resources"><h2>Recursos</h2></a>    
+            </section>
+        </mat-sidenav-content>
+</mat-sidenav-container>
 
-<h1>Angular CLI</h1>
-<p>
-    La interfaz de línea de comandos es una herramienta que nos permite 
-    inicializar, desarrollar, construir y mantener las aplicaciones de Angular.
-    Para usarla sólo necesitas tu terminal favorita, aunque también está 
-    disponible con interfaz de usuario a través de una extensión en VS Code.
-</p>
-
-<h2>Instalar Angular CLI</h2>
-<p>
-    <code>npm install -g @angular/cli</code>
-    Instalamos Angular CLI desde el gestor de paquete npm. La opción -g indica 
-    que lo instale de forma que el módulo pueda ser accedido desde cualquier 
-    punto del sistema de archivos.
-</p>
-
-<h2>Configurar CLI</h2>
-<p>
-    Podemos establecer la configuración del CLI para cada proyecto, esta 
-    configuración se encuentra en el fichero angular.json, que podemos editar 
-    directamente, o con el comando: <br /> 
-    <code>ng config</code>
-</p>
-
-<h2>Sintaxis de Angular CLI</h2>
-<p>
-    <em>ng commandNameOrAlias requiredArg [optionalArg] [options]</em>
-</p>
-
-<h3>Opciones Booleanas</h3>
-<p>
-    Pueden escribirse de dos formas:
-    Activada: --opcionBooleana
-    No activada: --noOpcionBooleana 
-</p>
-<h2>Comandos de Angular CLI</h2>
-<br>
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    <!--- Note that these columns can be defined in any order.
-            The actual rendered columns are set as a property on the row definition" -->
-    
-    <!-- Name Column -->
-    <ng-container matColumnDef="name" sticky>
-        <th mat-header-cell *matHeaderCellDef> Comando </th>
-        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-    
-    <!-- Description Column -->
-    <ng-container matColumnDef="description">
-        <th mat-header-cell *matHeaderCellDef> Descripción </th>
-        <td mat-cell *matCellDef="let element"> {{element.description}} </td>
-    </ng-container>
-     
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-      
-</section>
       

@@ -1,154 +1,174 @@
-<section>
-<h1>"Hola Mundo" en Angular</h1>
+<mat-sidenav-container class="example-container">
+        <mat-sidenav mode="side" opened>
+            <a routerLink="./" fragment="new">Crear el espacio de trabajo</a><br />
+            <a routerLink="./" fragment="files">Ficheros de un proyecto de Angular</a><br />
+            <a routerLink="./" fragment="launch">Lanzar la aplicación en un servidor local</a><br />
+            <a routerLink="./" fragment="modify">Modificar el primer fichero</a><br />
+            <a routerLink="./" fragment="see-also">Vea también</a><br />
+            <a routerLink="./" fragment="resources">Recursos</a><br />
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <section>
+            <h1>"Hola Mundo" en Angular</h1>
+            
+            <p>
+                El primer paso siempre que se aprende un nuevo lenguaje de programación es
+                hacer el clásico “Hola Mundo”, y aunque Angular no es un lenguaje de 
+                programación como tal, sino un web framework, sí que se basa en el lenguaje
+                Typescript.<br /><br />
+                Sea como sea, vamos a por el "Hola-Mundo":
+            </p>
+            
+            <a name="new"><h3>Crear el espacio de trabajo</h3></a>
+            <p>
+                Una vez instalado Angular CLI podemos crear un nuevo espacio de 
+                trabajo o aplicación:<br /><br />
+                <code>ng new "nombre-app"</code>
+                Como vamos a crear un “Hola Mundo” nuestro espacio de trabajo 
+                se llamará hello-world:<br />
+                <code>ng new hello-world</code><br /><br>
+                El comando new así como el comando ng tienen muchas variantes, 
+                si quieres conocer más acerca de los comandos que puedes realizar 
+                deberías visitar la <a routerLink="./../angular-cli">guía de Angular 
+                CLI</a>.<br /><br />
+                Tras introducir el comando, Angular realiza dos preguntas:<br /><br>
+                <img src="/assets/img/hello-world/angular-routing.png" width="650px"/><br /><br />
+                <strong>Would you like to add Angular routing? (y/N)</strong> Pregunta si 
+                se desea agregar el módulo de rutas a nuestra aplicación.<br /><br />
+                Este módulo consiste en un servicio que presenta un determinado componente 
+                a partir de la URL suministrada. No te preocupes si no te suenan conceptos
+                como módulo, servicio o componente. Los detallaremos más adelante.<br /><br />
+                De momento estamos aprendiendo, así que escribimos N (o no escribimos nada)
+                y presionamos ‘Enter’.<br /><br />
+                <img src="/assets/img/hello-world/stylesheet-format.png" width="650px"/><br /><br />
+                <strong>Which stylesheet format would you like to use?</strong> Angular quiere que 
+                indiquemos el formato de nuestras hojas de estilo.<br /><br />
+                Por simplicidad, utilizaremos CSS.<br /><br />
+                Tras esto, nuestro proyecto se creará, y podremos ver que Angular ha
+                creado una carpeta llamada “hello-world” con todos los ficheros necesarios
+                para nuestra aplicación.<br /><br />
+            </p>
 
-<p>
-    El primer paso siempre que se aprende un nuevo lenguaje de programación es
-    hacer el clásico “Hola Mundo”, y aunque Angular no es un lenguaje de 
-    programación como tal, sino un web framework, sí que se basa en el lenguaje
-    Typescript.<br /><br />
-    Sea como sea, vamos a por el "Hola-Mundo":
-</p>
-
-<p>
-    Una vez instalado Angular CLI podemos crear un nuevo espacio de 
-    trabajo o aplicación:<br /><br />
-    <code>ng new "nombre-app"</code>
-    Como vamos a crear un “Hola Mundo” nuestro espacio de trabajo 
-    se llamará hello-world:<br />
-    <code>ng new hello-world</code><br /><br>
-    El comando new así como el comando ng tienen muchas variantes, 
-    si quieres conocer más acerca de los comandos que puedes realizar 
-    deberías visitar la <a routerLink="./../angular-cli">guía de Angular 
-    CLI</a>.<br /><br />
-    Tras introducir el comando, Angular realiza dos preguntas:<br /><br>
-    <img src="/assets/img/hello-world/angular-routing.png" width="650px"/><br /><br />
-    <strong>Would you like to add Angular routing? (y/N)</strong> Pregunta si 
-    se desea agregar el módulo de rutas a nuestra aplicación.<br /><br />
-    Este módulo consiste en un servicio que presenta un determinado componente 
-    a partir de la URL suministrada. No te preocupes si no te suenan conceptos
-    como módulo, servicio o componente. Los detallaremos más adelante.<br /><br />
-    De momento estamos aprendiendo, así que escribimos N (o no escribimos nada)
-    y presionamos ‘Enter’.<br /><br />
-    <img src="/assets/img/hello-world/stylesheet-format.png" width="650px"/><br /><br />
-    <strong>Which stylesheet format would you like to use?</strong> Angular quiere que 
-    indiquemos el formato de nuestras hojas de estilo.<br /><br />
-    Por simplicidad, utilizaremos CSS.<br /><br />
-    Tras esto, nuestro proyecto se creará, y podremos ver que Angular ha
-    creado una carpeta llamada “hello-world” con todos los ficheros necesarios
-    para nuestra aplicación.<br /><br />
-<img src="/assets/img/hello-world/files-created.png" /><br />
-</p>
-<ul>
-    <li>
-        Carpeta e2e: Esta carpeta, cuyo nombre es "end to end", contiene una serie
-        de ficheros que se encargaran de realizar test automáticos, como si un 
-        usuario real interactuara con nuestra app.
-    </li>
-    <li>
-        Carpeta node_modules: Todos los paquetes necesarios instalados, los plugins 
-        también se instalarán ahí.
-    </li>
-    <li>
-        Carpeta src: la carpeta donde están los archivos fuentes de nuestro proyecto
-    </li>
-    <li>
-        .editorconfig: Configuración del editor, pensado para proyectos grandes, 
-        para que todos los integrantes trabajen con la misma configuración y 
-        evitar futuros problemas de incompatibilidades.
-    </li>
-    <li>
-        .gitignore: Archivos a ignorar por Git
-    </li>
-    <li>
-        angular.json: Configuración de Angular. Rutas, 
-        nombres, versiones, etc.
-    </li>
-    <li>
-        browserlist:
-    </li>
-    <li>
-        karma.conf.js:
-    </li>
-    <li>
-        package-lock.js:
-    </li>
-    <li>
-        package.json: Configuración de NUESTRA aplicación
-    </li>
-    <li>
-        README.md:
-    </li>
-    <li>
-        tsconfig.app.json:
-    </li>
-    <li>
-        tsconfig.json:
-    </li>
-    <li>
-        tsconfig-spec.json:
-    </li>
-    <li>
-        tslint.json: Linter de Typescript, se usa para la mantenibilidad y 
-        sostenibilidad de nuestro código.
-    </li>
-</ul>
-
-<p>
-    Para lanzar la aplicación: <code>ng serve</code> Angular CLI incluye un servidor 
-    para compilar y lanzar tu aplicación en local.<br />
-    <img src="/assets/img/hello-world/ng-serve.png" width="650px"/><br />
-    Como puede observarse en la imagen, Angular escucha por defecto por 
-    el puerto 4200. Si escribes en el navegador localhost:4200 o 127.0.0.1:4200:<br />
-    <img src="/assets/img/hello-world/hello-world.png" width="650px"/><br>
-    Pero no nos detendremos aquí, y es que un hola-mundo se caracteriza por 
-    su sencillez. Angular nos da una página bastante avanzada ya, así que 
-    vamos a personalizarla.<br /><br />
-    Para ello vamos al fichero '/src/app/app.component.html' y borramos todo
-    su contenido. Más adelante explicaremos por qué se utiliza este 
-    fichero y no otro.<br />
-    <img src="/assets/img/hello-world/html-changed.png" /><br />
-    Si volvemos a nuestro servidor, veremos nuestro querido Hola Mundo en 
-    Angular. (Además de darte cuenta de que el servidor ha sido modificado 
-    en tiempo real).<br />
-    <img src="/assets/img/hello-world/hello-world-final.png" />
-</p>
-
-<div class="see-also">
-    <h2>Vea también:</h2>
-    <p>
-        <a routerLink="./../ejemplos">Ejemplos de código en Angular</a><br />
-        <a routerLink="./../angular-cli">Guía de comandos de Angular CLI</a><br />
-    </p>
-</div>
-<br>
-
-<div class="resources">
-    <h2>Recursos</h2>
-    <p>
-        <a href="https://angular.io/guide/setup-local" target="blank">
-            Configuración Angular
-        </a><br />
-        <a href="https://www.javaguides.net/2019/06/angular-8-hello-world-example-tutorial.html" target="blank">
-            Javaguides: hello-world-example-tutorial
-        </a><br />
-        <a href="https://devconquer.com/angular/creating-hello-world-application-in-angular-8/" target="blank">
-            DevConquer: Creating hello world application 
-        </a><br />
-        <a href="https://medium.com/ngesyfirebase/primeros-pasos-con-angular-fc739d401cfa" target="blank">
-            Medium: Primeros pasos con Angular 
-        </a><br />
-        <a href="https://stackoverflow.com/questions/54966153/what-is-angular-routing" target="blank">
-            Stackoverflow: What is Angular routing 
-        </a>
-        <a href="https://editorconfig.org/" target="blank">
-            editorconfig.org
-        </a><br />
-        <a href="https://tantacom.com/editorconfig-manten-la-misma-configuracion-de-editor-para-todos-los-miembros-de-tu-equipo/" target="blank">
-            Tantacom: editorconfig, mantener la misma configuración de editor 
-        </a><br />
-        <a href="https://blog.jotagep.com/angular-estructura-de-directorios/" target="blank">
-            Jotagep Blog: Estructura de directorios
-        </a>
-    </p>
-</div>
-</section>
+            <a name="files"><h3>Ficheros de un proyecto de Angular</h3></a>
+            <img src="/assets/img/hello-world/files-created.png" /><br />
+            <ul>
+                <li>
+                    Carpeta e2e: Esta carpeta, cuyo nombre es "end to end", contiene una serie
+                    de ficheros que se encargaran de realizar test automáticos, como si un 
+                    usuario real interactuara con nuestra app.
+                </li>
+                <li>
+                    Carpeta node_modules: Todos los paquetes necesarios instalados, los plugins 
+                    también se instalarán ahí.
+                </li>
+                <li>
+                    Carpeta src: la carpeta donde están los archivos fuentes de nuestro proyecto
+                </li>
+                <li>
+                    .editorconfig: Configuración del editor, pensado para proyectos grandes, 
+                    para que todos los integrantes trabajen con la misma configuración y 
+                    evitar futuros problemas de incompatibilidades.
+                </li>
+                <li>
+                    .gitignore: Archivos a ignorar por Git
+                </li>
+                <li>
+                    angular.json: Configuración de Angular. Rutas, 
+                    nombres, versiones, etc.
+                </li>
+                <li>
+                    browserlist:
+                </li>
+                <li>
+                    karma.conf.js:
+                </li>
+                <li>
+                    package-lock.js:
+                </li>
+                <li>
+                    package.json: Configuración de NUESTRA aplicación
+                </li>
+                <li>
+                    README.md:
+                </li>
+                <li>
+                    tsconfig.app.json:
+                </li>
+                <li>
+                    tsconfig.json:
+                </li>
+                <li>
+                    tsconfig-spec.json:
+                </li>
+                <li>
+                    tslint.json: Linter de Typescript, se usa para la mantenibilidad y 
+                    sostenibilidad de nuestro código.
+                </li>
+            </ul>
+            
+            <a name="launch"><h3>Lanzar la aplicación en un servidor local</h3></a>
+            <p>
+                Para lanzar la aplicación: <code>ng serve</code> Angular CLI incluye un servidor 
+                para compilar y lanzar tu aplicación en local.<br />
+                <img src="/assets/img/hello-world/ng-serve.png" width="650px"/><br />
+                Como puede observarse en la imagen, Angular escucha por defecto por 
+                el puerto 4200. Si escribes en el navegador localhost:4200 o 127.0.0.1:4200:<br />
+                <img src="/assets/img/hello-world/hello-world.png" width="650px"/><br>
+            </p>
+            
+            <a name="modify"><h3>Modificando el primer fichero</h3></a>
+            <p>
+                Pero no nos detendremos aquí, y es que un hola-mundo se caracteriza por 
+                su sencillez. Angular nos da una página bastante avanzada ya, así que 
+                vamos a personalizarla.<br /><br />
+                Para ello vamos al fichero '/src/app/app.component.html' y borramos todo
+                su contenido. Más adelante explicaremos por qué se utiliza este 
+                fichero y no otro.<br />
+                <img src="/assets/img/hello-world/html-changed.png" /><br />
+                Si volvemos a nuestro servidor, veremos nuestro querido Hola Mundo en 
+                Angular. (Además de darte cuenta de que el servidor ha sido modificado 
+                en tiempo real).<br />
+                <img src="/assets/img/hello-world/hello-world-final.png" />
+            </p>
+            
+            <div class="see-also">
+                <a name="see-also"><h2>Vea también:</h2></a>
+                <p>
+                    <a routerLink="./../ejemplos">Ejemplos de código en Angular</a><br />
+                    <a routerLink="./../angular-cli">Guía de comandos de Angular CLI</a><br />
+                </p>
+            </div>
+            <br>
+            
+            <div class="resources">
+                    <a name="resources"><h2>Recursos</h2></a>
+                <p>
+                    <a href="https://angular.io/guide/setup-local" target="blank">
+                        Configuración Angular
+                    </a><br />
+                    <a href="https://www.javaguides.net/2019/06/angular-8-hello-world-example-tutorial.html" target="blank">
+                        Javaguides: hello-world-example-tutorial
+                    </a><br />
+                    <a href="https://devconquer.com/angular/creating-hello-world-application-in-angular-8/" target="blank">
+                        DevConquer: Creating hello world application 
+                    </a><br />
+                    <a href="https://medium.com/ngesyfirebase/primeros-pasos-con-angular-fc739d401cfa" target="blank">
+                        Medium: Primeros pasos con Angular 
+                    </a><br />
+                    <a href="https://stackoverflow.com/questions/54966153/what-is-angular-routing" target="blank">
+                        Stackoverflow: What is Angular routing 
+                    </a>
+                    <a href="https://editorconfig.org/" target="blank">
+                        editorconfig.org
+                    </a><br />
+                    <a href="https://tantacom.com/editorconfig-manten-la-misma-configuracion-de-editor-para-todos-los-miembros-de-tu-equipo/" target="blank">
+                        Tantacom: editorconfig, mantener la misma configuración de editor 
+                    </a><br />
+                    <a href="https://blog.jotagep.com/angular-estructura-de-directorios/" target="blank">
+                        Jotagep Blog: Estructura de directorios
+                    </a>
+                </p>
+            </div>
+            </section>  
+        </mat-sidenav-content>
+</mat-sidenav-container>

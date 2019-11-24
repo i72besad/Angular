@@ -1,6 +1,27 @@
+mat-sidenav-container {
+    background-color: transparent;
+}
+
+mat-sidenav {
+    background-color: transparent;
+    margin-top: 40px;
+    padding-right: 1%;
+    width: 600px;
+    line-height: 35px;
+    text-align: right;
+}
+
+mat-sidenav a {
+    padding : 10px 10px;
+}
+
+mat-sidenav-content {
+    margin: 0;
+}
+
 section {
-    margin-left: 500px;
-    margin-right: 500px;
+    /*margin-left: 500px;*/
+    margin-right: 600px;
     margin-top: 40px;
     margin-bottom: 20px;
     padding: 20px;

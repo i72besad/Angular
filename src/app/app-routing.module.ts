@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 import { HomeComponent } from './componentes/home/home.component';
 import { InstalacionComponent } from './componentes/instalacion/instalacion.component';
 import { HolaMundoComponent } from './componentes/hola-mundo/hola-mundo.component';
@@ -9,7 +9,10 @@ import { GlosarioComponent } from './componentes/glosario/glosario.component';
 import { AboutUsComponent } from './componentes/about-us/about-us.component';
 import { PageNotFoundComponent } from './componentes/page-not-found/page-not-found.component';
 
-
+const routerOptions: ExtraOptions = {
+  anchorScrolling: 'enabled',
+  onSameUrlNavigation: 'reload'
+};
 
 const routes: Routes = [
   {path: '', pathMatch: "full", redirectTo: '', component: HomeComponent},
@@ -23,7 +26,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
