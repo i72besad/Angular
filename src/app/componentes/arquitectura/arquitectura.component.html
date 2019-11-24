@@ -1,21 +1,19 @@
 <mat-sidenav-container class="example-container">
         <mat-sidenav mode="side" opened>
-            <a routerLink="./" fragment="intro">¿Qué es Angular?</a><br />
-            <a routerLink="./" fragment="diferencias">Diferencias entre Angular y AngularJS</a><br />
-            <a routerLink="./" fragment="moviles">Angular y los dispositivos móviles</a><br />
-            <a routerLink="./" fragment="ventajas">Ventajas y Desventajas de Angular</a><br />
-            <a routerLink="./" fragment="comparaciones">Comparaciones: React y Vue</a><br />
-            <a routerLink="./" fragment="casos-exito">Casos de exito</a><br />
-            <a routerLink="./" fragment="marco">Marco de Angular dentro de la asignatura</a><br />
+            <a routerLink="./" fragment="arquitectura">Arquitectura</a><br />
+            <a routerLink="./" fragment="componentes">Componentes</a><br />
+            <a routerLink="./" fragment="directivas">Directivas</a><br />
+            <a routerLink="./" fragment="modulos">Módulos</a><br />
+            <a routerLink="./" fragment="servicios">Servicios</a><br />
             <a routerLink="./" fragment="see-also">Vea también</a><br />
             <a routerLink="./" fragment="resources">Recursos</a><br />
         </mat-sidenav>
     <mat-sidenav-content>
 <section>
-    <h1>Arquitectura</h1>
+    <a name="arquitectura"><h1>Arquitectura</h1></a>
     <br>
 
-    <h2>Componentes</h2>
+    <a name="componentes"><h2>Componentes</h2></a>
     <p>
         Clases que controlan cómo se comporta un trozo de la pantalla, llamado vista. Usando el decorador @Component transformaremos
         dicha clase en un componente. Dentro de este decorador se define un selector, el cual identifica el nombre del componente, 
@@ -27,18 +25,18 @@
          combinación de los dos anteriores. Cada vez cambie el valor se notificará al hijo y cada vez que cambie el hijo se notificará al padre.
 
     </p>
-    <h2>Directivas</h2>
+    <a name="directivas"><h2>Directivas</h2></a>
     <p>
         Una directiva es una clase especial que define palabras clave que podremos usar dentro de nuestros templates. Una directiva puede ser 
         estructural si modifica el diseño o puede ser de atributo, que modifica la aparencia o comportamiento de un componente.
     </p>
-    <h2>Módulos</h2>
+    <a name="modulos"><h2>Módulos</h2></a>
     <p>
         Es la clase principal. Todas las aplicaciones tendrán al menos un módulo principal. En un módulo se especifica qué dependencias tiene la
          aplicación, qué componentes va a contener y cual va a ser el principal.
     </p>
 
-    <h2>Servicios</h2>
+    <a name="servicios"><h2>Servicios</h2></a>
     <p>
         Son clases que pueden ser usadas por los componentes para pedir datos u operaciones. Deberás usar servicios para aislar toda la lógica 
         de negocio de tu aplicación. Suelen ser usados para hacer peticiones a APIs aunque Angular también ofrece un mecanismo para poder usar
