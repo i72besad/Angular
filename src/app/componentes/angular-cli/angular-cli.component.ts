@@ -22,7 +22,7 @@ export interface Command {
 
 const ELEMENT_DATA: Command[] = [
   {name: 'add', description: 'Añadir paquetes a nuestra aplicación'},
-  {name: 'analytics', description: 'Configures the gathering of Angular CLI usage metrics.'},
+  {name: 'analytics', description: 'Configura la recopilación de métricas de uso de Angular CLI.'},
   {name: 'build', description: 'Compila una aplicación de Angular en un diretorio de salida denominado dist/ en la ruta dada. Debe ejecutarse dentro del directorio del proyecto'},
   {name: 'config', description: 'Modificar el fichero angular.json'},
   {name: 'deploy', description: 'Invoca al constructor para un proyecto específico'},
@@ -32,12 +32,12 @@ const ELEMENT_DATA: Command[] = [
   {name: 'help', description: 'Muestra la lista de todos los comandos'},
   {name: 'lint', description: 'Ejecuta test estáticos sobre el código fuente de una carpeta dada'},
   {name: 'new', description: 'Crea un nuevo espacio de trabajo y app inicial de Angular'},
-  {name: 'run', description: 'Runs an Architect target with an optional custom builder configuration defined in your project.'},
+  {name: 'run', description: 'Ejecuta una arquitectura con una configuración personalizada definida para su proyecto.'},
   {name: 'serve', description: 'Construye y sirve la aplicación, actualizándose en tiempo real'},
   {name: 'test', description: 'Ejecuta tests unitarios sobre el proyecto'},
   {name: 'update', description: 'Actualiza tu aplicación y sus dependencias'},
   {name: 'version', description: 'Muestra tu versión de Angular'},
-  {name: 'xi18n', description: '¿¿¿Muestra mensajes i18n desde el código fuente???'}
+  {name: 'xi18n', description: 'Permite internacionalizar el código de manera automática'}
 ];
 
 /**

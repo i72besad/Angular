@@ -4,7 +4,7 @@
             <a routerLink="./" fragment="diferencias">Diferencias entre Angular y AngularJS</a><br />
             <a routerLink="./" fragment="moviles">Angular y los dispositivos móviles</a><br />
             <a routerLink="./" fragment="ventajas">Ventajas y Desventajas de Angular</a><br />
-            <a routerLink="./" fragment="comparaciones">Comparaciones: React y Vue</a><br />
+            <a routerLink="./" fragment="Testing">Testing en Angular</a><br />
             <a routerLink="./" fragment="casos-exito">Casos de exito</a><br />
             <a routerLink="./" fragment="marco">Marco de Angular dentro de la asignatura</a><br />
             <a routerLink="./" fragment="see-also">Vea también</a><br />
@@ -16,8 +16,7 @@
             <br>
             <a name="intro"><h2>¿Qué es Angular?</h2></a>
             <p>Angular es un web framework desarrollado en TypeScript y mantenido por Google que destaca
-                por la sencillez con la que podemos desarrollar aplicaciones web
-                 <a routerLink="./../glosario">SPA</a> (Single Page App). 
+                por la sencillez con la que podemos desarrollar aplicaciones web SPA (Single Page App). 
             Angular es modular y se basa principalmente en lo que llaman “Componentes” que son unas clases 
             cuyas propiedades nos permite controlar partes de la página.
             Al ser desarrollado por Google, tiene una gran comunidad detrás, haciendo que sea uno de los Front-End 
@@ -42,7 +41,7 @@
             Angular se ha creado teniendo en cuenta una arquitectura orientada a móviles. Mediante el uso de bibliotecas como NativeScript
                 podremos agilizar el desarrollo para móviles con Angular, ya que renderiza un mismo código de forma distinta ya sea un navegador,
                 un dispositivo Android o un dispositivo iOS.<br>
-                <img src="assets/img/angular-graphic-min.png" width="600px">
+                <img src="assets/img/angular-graphic-min.png" width="560px">
             </p>
             
             <br>
@@ -74,6 +73,41 @@
             <br>
 
             <br>
+
+            <a name="Testing"><h2>Testing en Angular</h2></a>
+            <br>
+            <p>Todos sabemos la importancia que tiene la relaización de tests a nuestras aplicaciones y para ello Angular nos 
+                proporciona herramientas para facilitarnos la vida.
+            </p>
+                <h4>Jasmine</h4>
+                <p>
+                        Jasmine es un marco de prueba de código abierto para JavaScript. Su objetivo es ejecutarse en cualquier plataforma
+                         habilitada para JavaScript y tiene una sintaxis clara y obvia para que se puedan escribir pruebas fácilmente
+                </p>
+                <h4>Protractor</h4>
+                <p>
+                    Protractor es un framework para realizar testing en aplicaciones web usando el siguiente comando:
+                    <br><br>
+                    <mat-card>ng e2e</mat-card><br>
+                    Nos permitirá comprobar que los distintos componentes de la aplicación funcionan entre sí.
+                </p>
+                <h4>Karma</h4>
+                <p>
+                    Karma es un test runner, desarrollado por el equipo de Angular, el cual nos permitirá automatizar tareas de los tests.
+                </p>
+                <p>
+                    Para iniciar el testing usaremos el siguiente comando:<br><br>
+                    <mat-card>ng test</mat-card><br>
+                    Al lanzar este comando, lo que ocurrirá es que se recorrerá todo el árbol de Angular en busca de ficheros con terminación 
+                    .spec.ts con los cuales ejecutaremos los test.<br><br>
+                    Angular nos permite testear absolutamente todo, por eso es un punto a favor al decantarse por Angular en el desarrollo de 
+                    una web. Dejaremos en los recursos documentación para que el lector se inicie en el mundo del testing con Angular, el cual 
+                    es demasiado extenso como para ser tocado en nuestra web.
+                </p>
+
+
+            
+
             
             <a name="casos-exito"><h2>Casos de Éxito</h2></a>
             <p>Aquí tenéis varios ejemplos de empresas exitosas que usan Angular para desarrollar sus webs:
@@ -124,6 +158,16 @@
                         </a><br>
                         <a href="https://www.madewithangular.com/categories/angular/" target="blank">
                             Made with Angular <i class="fas fa-external-link-square-alt"></i>
+                        </a><br>
+                        <a href="https://angular.io/guide/testing" target="blank">
+                            Documentación oficial de testing con Angular <i class="fas fa-external-link-square-alt"></i>
+                        </a><br>
+                        <a href="https://medium.com/@jorgeucano/introducci%C3%B3n-al-testing-en-angular-da415ef8c47" target="blank">
+                            Introducción al testing con Angular <i class="fas fa-external-link-square-alt"></i>
+                        </a>
+                        <br>
+                        <a href="https://www.adictosaltrabajo.com/2017/06/13/tests-unitarios-de-integracion-y-de-aceptacion-en-angular-con-jasmine-karma-y-protractor/" target="blank">
+                            Test unitarios, de integración y de aceptación <i class="fas fa-external-link-square-alt"></i>
                         </a>
                     </p>
                 </div>

@@ -7,6 +7,8 @@
   <div id="content">
     <nav>
       <a routerLink="/{{seccion | lowercase}}" *ngFor="let seccion of secciones"><button mat-button>{{seccion}}</button></a>
+      <a id="github" title="Repositorio de GitHub"[href]="linkRepo" target="blank">
+          <img id="github" width="30px" src="assets/img/github-logo-3.png" /></a>
     </nav>
   
     <router-outlet></router-outlet>
@@ -17,9 +19,9 @@
       <button mat-button>Sobre Nosotros</button>
     </a>
     <span id="footer" title="El entusiasmo es la esencia de la sinceridad">angular-tutorial</span>
-    <a id="github" title="Repositorio de GitHub"[href]="linkRepo" target="blank">
-      <img width="70px" src="assets/img/github-logo-3.png" />
-    </a>
+    
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+    
   </footer>
 
 </div>
