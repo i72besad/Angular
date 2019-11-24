@@ -11,13 +11,20 @@
     <mat-sidenav-content>
 <section>
     <a name="arquitectura"><h1>Arquitectura</h1></a>
-    <br>
-
-    <a name="componentes"><h2>Componentes</h2></a>
+    
     <p>
-        Clases que controlan cómo se comporta un trozo de la pantalla, llamado vista. Usando el decorador @Component transformaremos
+        En esta sección os hablaremos sobre las cuatro tipos de clases principales.
+    </p>
+
+    <br>
+    <img src="assets/img/arquitectura.png" width="600px"><br>
+
+    <a name="componentes"><h2>Componentes</h2></a><br>
+    <img src="assets/img/component-tree.png"><br>
+    <p>
+        Los componentes son clases que controlan cómo se comporta un trozo de la pantalla, llamado vista. Usando el decorador @Component transformaremos
         dicha clase en un componente. Dentro de este decorador se define un selector, el cual identifica el nombre del componente, 
-        una plantilla para nuestro html y un estilo CSS para la misma. Un componente de Angular puede a su vez contener más componentes. 
+        una plantilla para nuestro html y un estilo CSS para la misma.<br> Un componente de Angular puede a su vez contener más componentes. 
         Para ello, usaremos Propiedades (@Input()) para envío de datos y Eventos (@Output()) para recibir datos. Para implementar esta comunicación
         usaremos Bindings (o uniones). Tenemos tres tipos de Bindings. El primero, el Binding de propiedad, nos servirá para asignar un valor a 
         uno de los Inputs del componente. Cada vez que cambie este valor el componente lo va a recibir. El segundo, el Binding de Evento, nos servirá
@@ -30,7 +37,8 @@
         Una directiva es una clase especial que define palabras clave que podremos usar dentro de nuestros templates. Una directiva puede ser 
         estructural si modifica el diseño o puede ser de atributo, que modifica la aparencia o comportamiento de un componente.
     </p>
-    <a name="modulos"><h2>Módulos</h2></a>
+    <a name="modulos"><h2>Módulos</h2></a><br>
+    <img src="assets/img/library-module.png"><br>
     <p>
         Es la clase principal. Todas las aplicaciones tendrán al menos un módulo principal. En un módulo se especifica qué dependencias tiene la
          aplicación, qué componentes va a contener y cual va a ser el principal.
@@ -40,7 +48,9 @@
     <p>
         Son clases que pueden ser usadas por los componentes para pedir datos u operaciones. Deberás usar servicios para aislar toda la lógica 
         de negocio de tu aplicación. Suelen ser usados para hacer peticiones a APIs aunque Angular también ofrece un mecanismo para poder usar
-         un mismo servicio dentro de múltiples componentes llamado Inyección de dependencias. La inyección de dependencias es un patrón de diseño 
+         un mismo servicio dentro de múltiples componentes llamado Inyección de dependencias.<br><br>
+         <img src="assets/img/injector-injects.png"><br>
+         La inyección de dependencias es un patrón de diseño 
          donde se pasan los objetos por parámetro a una clase en vez de ser la propia clase la que instancie esos objetos. De esta manera la clase 
          inyectada es mucho más fácil de testear ya que no tiene dependencias directas. En Angular solo tendremos que especificar en el módulo principal
           de tu aplicación qué clases queremos hacer inyectables. De este módulo, cada vez que utilices un constructor, Angular lo hará por ti.
@@ -58,23 +68,8 @@
         <div classs="resources">
                 <a name="resources"><h2>Recursos:</h2></a>
             <p class="extern">
-                <a href="https://www.campusmvp.es/recursos/post/las-10-principales-diferencias-entre-angularjs-y-angular.aspx" target="blank">
-                    Diferencias entre Angular y AngularJS <i class="fas fa-external-link-square-alt"></i>
-                </a><br />
-                <a href="https://www.lambdatest.com/blog/top-javascript-frameworks-for-2019/" target="blank">
-                    Top JavaScript Frameworks de 2019 <i class="fas fa-external-link-square-alt"></i>
-                </a><br />
-                <a href="https://medium.com/@fabisiakradoslaw/ranking-of-the-best-front-end-frameworks-in-2019-777ec90c8884" target="blank">
-                    Ranking mejores Front-End Frameworks <i class="fas fa-external-link-square-alt"></i>
-                </a><br />
-                <a href="https://www.altexsoft.com/blog/engineering/the-good-and-the-bad-of-angular-development/" target="blank">
-                    Pros y Contras de Angular <i class="fas fa-external-link-square-alt"></i>
-                </a><br />
-                <a href="https://trends.builtwith.com/framework/Angular" target="blank">
-                    Tendencias Angular <i class="fas fa-external-link-square-alt"></i>
-                </a><br>
-                <a href="https://www.madewithangular.com/categories/angular/" target="blank">
-                    Made with Angular <i class="fas fa-external-link-square-alt"></i>
+                <a href="https://angular.io/guide/architecture-modules" target="blank">
+                    Web oficial de Angular <i class="fas fa-external-link-square-alt"></i>
                 </a>
             </p>
         </div>
