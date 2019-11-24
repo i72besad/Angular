@@ -18,13 +18,25 @@ section {
 #carlos {
     grid-area: carlos;
     margin: auto;
+    text-align: center;
 }
 
 #david {
     grid-area: david;
     margin: auto;
+    text-align: center;
 }
 
 img {
     border-radius: 100%;
+    border: 2px solid rgb(109, 109, 109);
+}
+
+a { color: rgb(70, 112, 179) }
+
+a:hover { color: rgb(87, 160, 228) }
+
+mat-card {
+    margin: 20px;
+    text-align: justify;
 }
