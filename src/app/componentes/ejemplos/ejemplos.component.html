@@ -51,13 +51,15 @@
             Escriba un valor para la propiedad, envíelo y verá como la vista
             es modificada. <br />
             <!-- Ejemplo interpolación -->
-            <input #myInput type="text" value="Escriba aquí">
+            <input #myInput type="text" placeholder="Escriba aquí">
             <button mat-raised-button (click)="onClickInterpolation(myInput.value)">Enviar valor</button>
             Me llamo {{name}}
             <br />
         </mat-card-content>
     </mat-card>
     
+    <hr />
+
     <!-- Enlace de Propiedad -->
     <a name="bind-prop"></a><mat-card>
         <mat-card-title>Enlace de Propiedad</mat-card-title>
@@ -71,7 +73,7 @@
             </mat-card>
             <!-- Ejemplo enlace de propiedad -->
             <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
-            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+            <input [disabled]="isDisabled" type="text" placeholder="Escriba aquí">
             <br />
         </mat-card-content>
     </mat-card>
@@ -97,10 +99,11 @@
     <a name="bind-class"></a><mat-card>
         <mat-card-title>Enlace de Clase</mat-card-title>
         <mat-card-content>
-            Su funcionamiento es el mismo que para el enlace de propiedad
+            Aplica una clase terminada a un elemento mediante un enlace de
+            propiedad<br /><br />
             <!-- Ejemplo enlace de clase -->
-            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
-            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+            <button mat-stroked-button (click)="onClickClass()">Cambiar clase</button>
+            <h3 [class]="myClass">Texto de Ejemplo</h3>
             <br />
         </mat-card-content>
     </mat-card>
@@ -109,10 +112,19 @@
     <a name="bind-event"></a><mat-card>
         <mat-card-title>Enlace de Evento</mat-card-title>
         <mat-card-content>
-            Su funcionamiento es el mismo que para el enlace de propiedad
+            A lo largo de estos ejemplos se han ido asociando el click a un
+            botón con un método determinado del componente. Esto se denomina
+            enlace de evento.<br /><br />
+            La sintaxis del enlace de evento es la siguiente:<br />
+            <mat-card class="code">
+                {{ '(' }}evento{{ ')' }} = "miEvento"
+            </mat-card>
             <!-- Ejemplo enlace de evento -->
-            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
-            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+            El método puede escribirse inline, es decir, aparece a continuación
+            el código del método. <br />
+            <input #myEvent type="text" placeholder="Su framework favorito">
+            <button mat-stroked-button (click)="framework=myEvent.value">Ejecutar Método</button>
+            <h3>Mi framework favorito es {{framework}}</h3>
             <br />
         </mat-card-content>
     </mat-card>
@@ -121,22 +133,45 @@
     <a name="two-way-bind"></a><mat-card>
         <mat-card-title>Enlace Bidireccional</mat-card-title>
         <mat-card-content>
-            Su funcionamiento es el mismo que para el enlace de propiedad
+            La principal característica de Angular es que la modificación de la
+            vista puede alterar el modelo de nuestra aplicación, alterando a su
+            vez la vista de nuevo. <br /><br />Para poder modificar la vista
+            al mismo tiempo que modificamos el modelo utilizamos la directiva
+            <strong>NgModel</strong>, que se encuentra en su módulo específico:
+            <br /><br />
             <!-- Ejemplo enlace bidireccional -->
-            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
-            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+            <input [(ngModel)]="name" type="text" placeholder="Escriba aquí">
+            <h3>{{name}}</h3>
             <br />
         </mat-card-content>
     </mat-card>
     
+    <hr />
+
     <!-- Uso de directivas -->
     <a name="directive"></a><mat-card>
         <mat-card-title>Uso de Directivas</mat-card-title>
         <mat-card-content>
-            Su funcionamiento es el mismo que para el enlace de propiedad
+            Una directiva es un atributo personalizado que nos proporciona
+            Angular. Ya hemos visto alguna de ellas, como ngModel en el
+            enlace bidireccional. Existen un tipo concreto de directivas,
+            que nos ayudan a controlar el flujo de componentes. Estas son las
+            directivas estructurales, que se indican con un * al principio.
+            <br /><br />Las directivas estructurales son las siguientes.<br />
+            <mat-card class="code">
+                *ngIf<br />
+                *ngFor<br />
+                *ngSwitch<br />
+            </mat-card>
             <!-- Ejemplo uso de directivas -->
-            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
-            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+            <button mat-stroked-button (click)="displayHi=!displayHi">Cambiar valor de la condición del if</button>
+            <div *ngIf="displayHi; then thenBlock; else elseBlock"></div>
+                <ng-template #thenBlock>
+                    <h3>Bienvenido al Tutorial de Angular</h3>
+                </ng-template>
+                <ng-template #elseBlock>
+                    <h3>No eres bienvenido al Tutorial de Angular</h3>
+                </ng-template>
             <br />
         </mat-card-content>
     </mat-card>
@@ -145,11 +180,39 @@
     <a name="pipes"></a><mat-card>
         <mat-card-title>Uso de Tuberías o Pipes</mat-card-title>
         <mat-card-content>
-            Su funcionamiento es el mismo que para el enlace de propiedad
+            Podemos modificar el contenido devuelto por las interpolaciones
+            a través de las tuberías, denominadas a partir de ahora pipes.
+            (tubería en inglés) <br />
+            <mat-card class="code">
+                {{ '{' }}{{ '{' }} string | lowercase {{ '}' }}{{ '}' }}<br />
+                {{ '{' }}{{ '{' }} string | uppercase {{ '}' }}{{ '}' }}<br />
+                {{ '{' }}{{ '{' }} string | titlecase {{ '}' }}{{ '}' }}<br />
+                {{ '{' }}{{ '{' }} string | slice:3:5 {{ '}' }}{{ '}' }}<br />
+                {{ '{' }}{{ '{' }} string | json {{ '}' }}{{ '}' }}<br />
+                {{ '{' }}{{ '{' }} number | number:'3.4-5' {{ '}' }}{{ '}' }}<br />
+                {{ '{' }}{{ '{' }} number | percent {{ '}' }}{{ '}' }}<br />
+                {{ '{' }}{{ '{' }} number | currency {{ '}' }}{{ '}' }}<br />
+                {{ '{' }}{{ '{' }} number | currency: 'EUR' {{ '}' }}{{ '}' }}<br />
+                {{ '{' }}{{ '{' }} date {{ '}' }}{{ '}' }}<br />
+                {{ '{' }}{{ '{' }} date | date:'short' {{ '}' }}{{ '}' }}<br />
+            </mat-card>
             <!-- Ejemplo uso de pipes -->
-            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
-            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
-            <br />
+            CADENA: <input [(ngModel)]="miCadena" type="text" placeholder="Escriba aquí">
+            NUMERO: <input [(ngModel)]="miNumero" type="text" placeholder="Escriba aquí"><br />
+            {{ miCadena }}<br />
+            {{ miCadena | lowercase }}<br />
+            {{ miCadena | uppercase }}<br />
+            {{ miCadena | titlecase }}<br />
+            {{ miCadena | slice:3:5 }}<br />
+            {{ miCadena | json }}<br />
+            {{ miNumero }}<br />
+            {{ miNumero | number:'3.4-5' }}<br />
+            {{ miNumero | percent }}<br />
+            {{ miNumero | currency }}<br />
+            {{ miNumero | currency: 'EUR' }}<br />
+            {{ miFecha }}<br />
+            {{ miFecha | date:'short' }}<br />
+            {{ miFecha | lowercase }}<br />
         </mat-card-content>
     </mat-card>
     
@@ -157,10 +220,15 @@
     <a name="template"></a><mat-card>
         <mat-card-title>Variables de Referencia de Plantilla</mat-card-title>
         <mat-card-content>
-            Su funcionamiento es el mismo que para el enlace de propiedad
+            Utilizadas para acceder fácilmente a algún elemento del DOM.<br />
+            <mat-card class="code">
+                    {{ '<' }}input #myInput type="text"{{ '>' }}<br />
+                    {{ '<' }}button (click)="miMetodo(myInput.value)"{{ '>' }}<br />
+            </mat-card>
             <!-- Ejemplo Template Reference Variables -->
-            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
-            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+            <input #myTemplate type="text" placeholder="Escriba algo">
+            <button mat-raised-button (click)="name=myTemplate.value">Enviar</button><br />
+            Ha introducido {{name}}
             <br />
         </mat-card-content>
     </mat-card>
@@ -169,23 +237,43 @@
     <a name="input-output"></a><mat-card>
         <mat-card-title>Input, Output</mat-card-title>
         <mat-card-content>
-            Su funcionamiento es el mismo que para el enlace de propiedad
+            Angular también permite la interacción entre los distintos
+            componentes, transmitiendo mensajes de padre a hijo y viceversa.
+            <br />
+            <mat-card class="code">
+                import {{ '{' }}Input, Output, EvenEmitter{{ '}' }}<br />
+                <br />
+                @Input('dataParent') public greet;<br />
+                @Output() public myEvent = new EventEmitter();<br />
+                <br />
+                lanzaMsg() {{ '{' }}<br />
+                    this.myEvent.emit("Hola usuario");<br />
+                {{ '}' }}<br />
+            </mat-card>
             <!-- Ejemplo Input, Output -->
-            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
-            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+            Este ejemplo será realizado en clase
             <br />
         </mat-card-content>
     </mat-card>
     
+    <hr />
+
     <!-- Routing -->
     <a name="routing"></a><mat-card>
         <mat-card-title>Routing</mat-card-title>
         <mat-card-content>
-            Su funcionamiento es el mismo que para el enlace de propiedad
+            Este es el módulo que Angular nos pregunta si queremos importar
+            al crear una nueva aplicación de Angular. Permite simular la
+            navegación entre distintas páginas mediante la adición y sustracción
+            de componentes<br />
+            <mat-card class="code">
+                
+            </mat-card>
             <!-- Ejemplo Routing -->
-            <button mat-stroked-button (click)="onClickDisabled()">Cambiar propiedad</button>
-            <input [disabled]="isDisabled" type="text" value="Escriba aquí">
             <br />
+            Esta página es el mejor ejemplo de Routing que podemos ofrecerte,
+            navega entre las distintas páginas, utiliza los enlaces internos,
+            y sobre todo, ¡aprende!
         </mat-card-content>
     </mat-card>
     
@@ -195,10 +283,7 @@
     </section>
     
     <!--
-        La principal característica de Angular es que la modificación de la
-            vista puede alterar el modelo de nuestra aplicación, alterando a su
-            vez la vista de nuevo. <br /><br />Para mostrar el valor de una
-            determinada propiedad se utiliza la interpolación cuya sintaxis es:
+        
     -->
 </mat-sidenav-content>
 </mat-sidenav-container>
