@@ -7,3 +7,8 @@ section {
     background: white;
     border-radius: 4px;
 }
+
+.code {
+    background: rgb(39, 39, 39);
+    color: rgb(0, 255, 0);
+}

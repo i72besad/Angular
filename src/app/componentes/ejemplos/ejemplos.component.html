@@ -19,8 +19,33 @@
 <p>
     A continuación te mostramos algunos ejemplos de lo que se puede hacer con Angular
 </p>
+
+
 <mat-card>
-    Simple card
+    <mat-card-title>Interpolación</mat-card-title>
+    <mat-card-content>
+        La principal característica de Angular es que la modificación de la
+        vista puede alterar el modelo de nuestra aplicación, alterando a su
+        vez la vista de nuevo. <br /><br />Para mostrar el valor de una
+        determinada propiedad se utiliza la interpolación cuya sintaxis es:
+        <mat-card class="code">
+            {{ '{' }}{{ '{' }}variable{{ '}' }}{{ '}' }}
+        </mat-card>
+        <input type="text" value="Escriba aquí">
+        Me llamo {{name}}
+        <br />
+    </mat-card-content>
+</mat-card>
+
+<mat-card>
+    <mat-card-title>Enlace de Propiedad</mat-card-title>
+    <mat-card-content>
+        Los siguientes inputs asocian su atributo <strong>disabled</strong> a una variable
+        definida en la clase de Javascript denominada <em>isDisabled</em>
+        <button mat-stroked-button (click)="onClick()">Cambiar propiedad</button>
+        <input [disabled]="isDisabled" type="text" value="Escriba aquí">
+        <br />
+    </mat-card-content>
 </mat-card>
 
 </section>

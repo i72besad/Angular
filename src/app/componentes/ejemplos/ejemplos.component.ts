@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EjemplosComponent implements OnInit {
 
+  public myId = "testId";
+  public isDisabled = true;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClick() {
+    this.isDisabled = !this.isDisabled;
   }
 
 }
